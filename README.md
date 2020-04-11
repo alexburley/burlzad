@@ -1,2 +1,3 @@
-# burlzad
-Personal server. Thing.
+# Burlzad
+
+Personal server, website, thing.
