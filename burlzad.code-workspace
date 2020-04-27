@@ -1,6 +1,0 @@
-{
-  "settings": {
-    "editor.defaultFormatter": "scalameta.metals",
-    "editor.formatOnSave": true
-  }
-}
