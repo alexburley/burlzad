@@ -17,6 +17,18 @@ export default class Loader extends React.Component {
     clearInterval(this.timer);
   }
 
+  setupCanvas(canvas) {
+    const dpr = window.devicePixelRatio || 1;
+    const rect = this.canvas.current.getBoundingClientRect();
+    this.setState({
+      canvasWidth: rect.width * dpr,
+      canvasHeight: rect.height * dpr,
+    });
+    const ctx = canvas.getContext("2d");
+    ctx.scale(dpr, dpr);
+    return ctx;
+  }
+
   tick() {
     if (this.state.arc < 100) {
       this.setState({
