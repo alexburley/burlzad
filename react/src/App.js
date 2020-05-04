@@ -5,10 +5,12 @@ import Loader from "./Loader.js";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Burlzad</h1>
+      <div className="Intro">
         <Loader />
-      </header>
+      </div>
+      {/* <header className="App-header"> */}
+      {/* <h1>Burlzad</h1> */}
+      {/* </header> */}
     </div>
   );
 }

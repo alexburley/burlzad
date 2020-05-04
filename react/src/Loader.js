@@ -5,28 +5,23 @@ export default class Loader extends React.Component {
     super(props);
     this.state = { arc: 0 };
     this.canvas = React.createRef();
-    this.canvasWidth = 450;
-    this.canvasHeight = 225;
+    this.dpr = window.devicePixelRatio || 1;
+    this.styleWidth = 900;
+    this.styleHeight = 450;
+    this.canvasWidth = this.styleWidth * this.dpr;
+    this.canvasHeight = this.styleHeight * this.dpr;
   }
 
   componentDidMount() {
     this.timer = setInterval(() => this.tick(), 30);
+    this.ctx = this.canvas.current.getContext("2d");
+    this.canvas.current.style.width = `${this.styleWidth}px`;
+    this.canvas.current.style.height = `${this.styleHeight}px`;
+    this.ctx.scale(this.dpr, this.dpr);
   }
 
   componentWillUnmount() {
     clearInterval(this.timer);
-  }
-
-  setupCanvas(canvas) {
-    const dpr = window.devicePixelRatio || 1;
-    const rect = this.canvas.current.getBoundingClientRect();
-    this.setState({
-      canvasWidth: rect.width * dpr,
-      canvasHeight: rect.height * dpr,
-    });
-    const ctx = canvas.getContext("2d");
-    ctx.scale(dpr, dpr);
-    return ctx;
   }
 
   tick() {
@@ -34,24 +29,27 @@ export default class Loader extends React.Component {
       this.setState({
         arc: this.state.arc + 1,
       });
-      //   const dpr = window.devicePixelRatio || 1;
-      const ctx = this.canvas.current.getContext("2d");
-      ctx.strokeStyle = "white";
-      ctx.beginPath();
-      ctx.arc(225, 150, 75, 0, this.state.arc * 0.01 * 2 * Math.PI);
-      ctx.stroke();
+
+      this.ctx.strokeStyle = "white";
+      this.ctx.beginPath();
+      this.ctx.arc(
+        this.styleWidth / 2,
+        this.styleHeight / 2,
+        200,
+        0,
+        this.state.arc * 0.01 * 2 * Math.PI
+      );
+      this.ctx.stroke();
     }
   }
 
   render() {
     return (
-      <div>
-        <canvas
-          ref={this.canvas}
-          width={this.canvasWidth}
-          height={this.canvasHeight}
-        ></canvas>
-      </div>
+      <canvas
+        ref={this.canvas}
+        width={this.canvasWidth}
+        height={this.canvasHeight}
+      ></canvas>
     );
   }
 }
