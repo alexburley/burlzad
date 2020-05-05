@@ -13,11 +13,15 @@ export default class Loader extends React.Component {
   }
 
   componentDidMount() {
-    this.timer = setInterval(() => this.tick(), 30);
+    setTimeout(() => setInterval(() => this.tick(), 30), 1500);
     this.ctx = this.canvas.current.getContext("2d");
     this.canvas.current.style.width = `${this.styleWidth}px`;
     this.canvas.current.style.height = `${this.styleHeight}px`;
     this.ctx.scale(this.dpr, this.dpr);
+    this.ctx.strokeStyle = "white";
+    this.ctx.fillStyle = "white";
+    this.ctx.textAlign = "center";
+    this.ctx.font = "30px Lucida Console";
   }
 
   componentWillUnmount() {
@@ -29,9 +33,22 @@ export default class Loader extends React.Component {
       this.setState({
         arc: this.state.arc + 1,
       });
+      this.ctx.clearRect(
+        0,
+        0,
+        this.canvas.current.width,
+        this.canvas.current.height
+      );
+      const alpha = this.state.arc / 100;
+      this.ctx.fillStyle = "rgba(255, 255, 255, " + alpha + ")";
+      this.ctx.fillText(
+        this.state.arc,
+        this.styleWidth / 2,
+        this.styleHeight / 2
+      );
 
-      this.ctx.strokeStyle = "white";
       this.ctx.beginPath();
+
       this.ctx.arc(
         this.styleWidth / 2,
         this.styleHeight / 2,
