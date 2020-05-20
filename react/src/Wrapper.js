@@ -1,5 +1,6 @@
 import React from "react";
 import Loader from "./Loader.js";
+import ProjectBox from "./ProjectBox.js";
 
 export default class Wrapper extends React.Component {
   constructor(props) {
@@ -11,16 +12,17 @@ export default class Wrapper extends React.Component {
   }
 
   render() {
-    if (!this.state.loaded) {
-      return <Loader finished={this.hasFinished} />;
-    } else {
-      return (
-        <header className="App-header">
-          <h1>Burlzad</h1>
-        </header>
-      );
-    }
+    // if (!this.state.loaded) {
+    //   return <Loader finished={this.hasFinished} />;
+    // } else {
+    return (
+      <div className="Projects">
+        <ProjectBox />
+      </div>
+    );
+    // }
   }
+
   hasFinished() {
     this.setState({
       loaded: true,

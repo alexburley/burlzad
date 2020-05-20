@@ -1,0 +1,13 @@
+.ProjectBox {
+  border: 0.5px solid white;
+  width: 200px;
+}
+
+.ProjectBoxHeader {
+  border: 0.5px solid white;
+}
+
+.ProjectBoxContent {
+  padding: 20px;
+  font-size: 12px;
+}
