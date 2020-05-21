@@ -1,13 +1,47 @@
 .ProjectBox {
-  border: 0.5px solid white;
-  width: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .ProjectBoxHeader {
-  border: 0.5px solid white;
+  border-top: 0.5px solid white;
+  border-left: 0.5px solid white;
+  border-right: 0.5px solid white;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  max-width: 200px;
+}
+
+.showBottom {
+  padding-bottom: 0.5px;
+  padding-top: 0.5px;
+  border-bottom: 0.5px solid white;
 }
 
 .ProjectBoxContent {
+  max-width: 200px;
   padding: 20px;
   font-size: 12px;
+  border: 0.5px solid white;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: white;
 }

@@ -7,28 +7,54 @@ export default class Loader extends React.Component {
     this.state = {
       displayBoxContent: true,
     };
+    this.toggleContent = this.toggleContent.bind(this);
+    this.displayContent = this.displayContent.bind(this);
+    this.displayHeader = this.displayHeader.bind(this);
+  }
+
+  toggleContent() {
+    this.setState({
+      displayBoxContent: !this.state.displayBoxContent,
+    });
+  }
+
+  displayHeader() {
+    const headerClass = "ProjectBoxHeader";
+    return (
+      <div
+        className={
+          this.state.displayBoxContent
+            ? headerClass
+            : `${headerClass} showBottom`
+        }
+      >
+        <button onClick={this.toggleContent}>
+          <p>About Me</p>
+        </button>
+      </div>
+    );
+  }
+
+  displayContent() {
+    return (
+      <div
+        className={
+          this.state.displayBoxContent
+            ? "ProjectBoxContent"
+            : "ProjectBoxContent hidden"
+        }
+      >
+        Lorem ipsum something something
+      </div>
+    );
   }
 
   render() {
-    if (!this.state.displayBoxContent) {
-      return (
-        <div className="ProjectBox">
-          <div className="ProjectBoxHeader">
-            <p>About Me</p>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="ProjectBox">
-          <div className="ProjectBoxHeader">
-            <p>About Me</p>
-          </div>
-          <div className="ProjectBoxContent">
-            I am a software developer based in London.
-          </div>
-        </div>
-      );
-    }
+    return (
+      <div className="ProjectBox">
+        {this.displayHeader()}
+        {this.displayContent()}
+      </div>
+    );
   }
 }
