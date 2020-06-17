@@ -1,4 +1,4 @@
-package example
+package api
 
 import org.scalatest._
 
