@@ -1,14 +1,19 @@
 import Dependencies._
 
-ThisBuild / scalaVersion     := "2.12.11"
-ThisBuild / version          := "0.1.0-SNAPSHOT"
-ThisBuild / organization     := "com.example"
+ThisBuild / scalaVersion := "2.12.11"
+ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / organization := "com.example"
 ThisBuild / organizationName := "example"
 
 lazy val root = (project in file("."))
   .settings(
     name := "api",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies += scalaTest % Test,
+    libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-actor" % "2.5.13",
+      "com.typesafe.akka" %% "akka-stream" % "2.5.13",
+      "com.typesafe.akka" %% "akka-http" % "10.1.3"
+    )
   )
 
 // Uncomment the following for publishing to Sonatype.
