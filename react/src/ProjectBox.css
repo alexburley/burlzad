@@ -1,8 +1,3 @@
-.ProjectBox {
-  max-width: 200px;
-  max-height: 200px;
-}
-
 .ProjectBoxHeader {
   border-top: 0.5px solid white;
   border-left: 0.5px solid white;
@@ -10,7 +5,6 @@
   border-radius: 8px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  max-width: 200px;
 }
 
 .showBottom {
@@ -20,7 +14,6 @@
 }
 
 .ProjectBoxContent {
-  max-width: 200px;
   padding: 20px;
   font-size: 12px;
   border: 0.5px solid white;

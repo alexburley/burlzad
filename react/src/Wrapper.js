@@ -1,6 +1,7 @@
 import React from "react";
 import Loader from "./Loader.js";
 import ProjectBox from "./ProjectBox.js";
+import "./Wrapper.css";
 
 export default class Wrapper extends React.Component {
   constructor(props) {
@@ -17,6 +18,8 @@ export default class Wrapper extends React.Component {
     // } else {
     return (
       <div className="Projects">
+        <ProjectBox />
+        <ProjectBox />
         <ProjectBox />
       </div>
     );
