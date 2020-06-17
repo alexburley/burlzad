@@ -18,5 +18,5 @@ project/plugins/project/
 .idea
 
 #metals
-# .bloop/
-# .metals/
+.bloop/
+.metals/
