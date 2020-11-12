@@ -79,7 +79,7 @@ export default function Wrapper({ done }) {
   }, [hasCompleted]);
 
   useEffect(() => {
-    if (globalAlpha === 0) done();
+    if (globalAlpha === 0) typeof done === "function" && done();
   }, [globalAlpha, done]);
 
   return (
