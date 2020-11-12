@@ -1,115 +1,88 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 
-export default class Loader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      arc: 0,
-      hasLoaded: false,
-      ticks: 0,
-      hasFinished: false,
-      globalAlpha: 1.0,
-    };
-    this.canvas = React.createRef();
-    this.dpr = window.devicePixelRatio || 1;
-    this.styleWidth = 900;
-    this.styleHeight = 450;
-    this.canvasWidth = this.styleWidth * this.dpr;
-    this.canvasHeight = this.styleHeight * this.dpr;
-  }
+export default function Wrapper({ done }) {
+  const [arc, setArc] = useState(0);
+  const [hasCompleted, setHasCompleted] = useState(false);
+  const [globalAlpha, setGlobalAlpha] = useState(1.0);
+  const [intervalId, setIntervalId] = useState();
 
-  componentDidMount() {
-    setTimeout(() => setInterval(() => this.tick(), 30), 1500); // After 1.5 seconds trigger a timer to render a frame
-    this.ctx = this.canvas.current.getContext("2d");
-    this.canvas.current.style.width = `${this.styleWidth}px`;
-    this.canvas.current.style.height = `${this.styleHeight}px`;
-    this.ctx.scale(this.dpr, this.dpr);
-  }
+  const dpr = window.devicePixelRatio || 1;
+  const canvas = useRef(null);
+  const styleWidth = 900;
+  const styleHeight = 450;
+  const canvasWidth = styleWidth * dpr;
+  const canvasHeight = styleHeight * dpr;
 
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
+  useEffect(() => {
+    const ctx = canvas.current.getContext("2d");
+    canvas.current.style.width = `${styleWidth}px`;
+    canvas.current.style.height = `${styleHeight}px`;
+    ctx.scale(dpr, dpr);
+  }, [dpr]);
 
-  tick() {
-    if (!this.state.hasFinished) {
-      if (this.state.arc < 100) {
-        this.ctx.clearRect(
-          0,
-          0,
-          this.canvas.current.width,
-          this.canvas.current.height
-        );
-        this.setState({
-          arc: this.state.arc + 1,
-        });
-        this.renderCircle();
-        this.renderPercentage();
-      } else {
-        this.setState({
-          hasLoaded: true,
-        });
-      }
-      if (this.state.hasLoaded) {
-        if (this.state.ticks < 10) {
-          this.setState({
-            ticks: this.state.ticks + 1,
-          });
-        } else {
-          this.ctx.clearRect(
-            0,
-            0,
-            this.canvas.current.width,
-            this.canvas.current.height
-          );
-          const alphaToSet =
-            this.state.globalAlpha < 0.05 ? 0 : this.state.globalAlpha - 0.05;
-          this.setState({
-            globalAlpha: alphaToSet,
-          });
-          this.ctx.globalAlpha = this.state.globalAlpha;
-          this.renderCircle();
-          this.renderPercentage();
-        }
-      }
-      if (this.state.globalAlpha === 0) {
-        this.setState({ hasFinished: true });
-        this.props.finished();
-      }
+  useEffect(() => {
+    const ctx = canvas.current.getContext("2d");
+    ctx.globalAlpha = globalAlpha;
+
+    ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
+    ctx.strokeStyle = "white";
+    ctx.beginPath();
+    ctx.arc(styleWidth / 2, styleHeight / 2, 200, 0, arc * 0.01 * 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+    ctx.font = "30px Lucida Console";
+    const alpha = arc / 100;
+    ctx.fillStyle = "rgba(255, 255, 255, " + alpha + ")";
+    ctx.fillText(Math.floor(arc), styleWidth / 2, styleHeight / 2);
+  }, [arc, globalAlpha]);
+
+  useEffect(() => {
+    let timer;
+    if (arc === 100) {
+      clearInterval(intervalId);
+      setHasCompleted(true);
+      timer = setTimeout(() => {}, 30);
     }
-  }
+    return () => clearTimeout(timer);
+  }, [arc, intervalId]);
 
-  renderPercentage() {
-    this.ctx.fillStyle = "white";
-    this.ctx.textAlign = "center";
-    this.ctx.font = "30px Lucida Console";
-    const alpha = this.state.arc / 100;
-    this.ctx.fillStyle = "rgba(255, 255, 255, " + alpha + ")";
-    this.ctx.fillText(
-      this.state.arc,
-      this.styleWidth / 2,
-      this.styleHeight / 2
-    );
-  }
-  renderCircle() {
-    this.ctx.strokeStyle = "white";
-    this.ctx.beginPath();
-    this.ctx.arc(
-      this.styleWidth / 2,
-      this.styleHeight / 2,
-      200,
-      0,
-      this.state.arc * 0.01 * 2 * Math.PI
-    );
-    this.ctx.stroke();
-  }
+  useEffect(() => {
+    let interval;
+    const timeout = setTimeout(() => {
+      interval = setInterval(() => {
+        setArc((arc) => arc + 1 / dpr);
+      }, 10);
+      setIntervalId(interval);
+    }, 1500);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [dpr]);
 
-  render() {
-    return (
-      <canvas
-        ref={this.canvas}
-        width={this.canvasWidth}
-        height={this.canvasHeight}
-      ></canvas>
-    );
-  }
+  useEffect(() => {
+    let interval;
+    let timer;
+    if (hasCompleted) {
+      timer = setTimeout(() => {
+        interval = setInterval(() => {
+          setGlobalAlpha((alpha) => (alpha > 0 ? alpha - 0.05 : 0));
+        }, 30);
+      }, 500);
+    }
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
+  }, [hasCompleted]);
+
+  useEffect(() => {
+    if (globalAlpha === 0) done();
+  }, [globalAlpha, done]);
+
+  return (
+    <canvas ref={canvas} width={canvasWidth} height={canvasHeight}></canvas>
+  );
 }
