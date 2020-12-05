@@ -1,0 +1,16 @@
+.app {
+  text-align: center;
+}
+
+.app-link {
+  color: #61dafb;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.app-container {
+  width: 800px;
+  margin: auto;
+}

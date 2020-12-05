@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-export default function Wrapper({ done }) {
+export default function Wrapper({ hasLoaded }) {
   const [arc, setArc] = useState(0);
   const [hasCompleted, setHasCompleted] = useState(false);
   const [globalAlpha, setGlobalAlpha] = useState(1.0);
@@ -68,7 +68,10 @@ export default function Wrapper({ done }) {
     if (hasCompleted) {
       timer = setTimeout(() => {
         interval = setInterval(() => {
-          setGlobalAlpha((alpha) => (alpha > 0 ? alpha - 0.05 : 0));
+          setGlobalAlpha((alpha) => {
+            if (alpha < 0) clearInterval(interval);
+            return alpha > 0 ? alpha - 0.05 : 0;
+          });
         }, 30);
       }, 500);
     }
@@ -79,8 +82,11 @@ export default function Wrapper({ done }) {
   }, [hasCompleted]);
 
   useEffect(() => {
-    if (globalAlpha === 0) typeof done === "function" && done();
-  }, [globalAlpha, done]);
+    console.log(globalAlpha);
+    if (globalAlpha <= 0) {
+      hasLoaded(true);
+    }
+  }, [globalAlpha, hasLoaded]);
 
   return (
     <canvas ref={canvas} width={canvasWidth} height={canvasHeight}></canvas>
