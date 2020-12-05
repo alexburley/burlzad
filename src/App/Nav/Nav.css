@@ -2,5 +2,7 @@
   border: 1px solid white;
   height: 40px;
   width: 100%;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

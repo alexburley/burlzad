@@ -1,0 +1,38 @@
+.nav-item {
+  display: inline-block;
+  height: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: inherit;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  color: #61dafb;
+  background: inherit;
+}
+
+button:focus {
+  outline: 0px solid white;
+  color: #61dafb;
+  outline-offset: -4px;
+}
+
+button:active {
+  color: #61dafb;
+  transform: scale(0.99);
+}

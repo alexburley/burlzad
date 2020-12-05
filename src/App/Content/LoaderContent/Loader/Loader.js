@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-export default function Wrapper({ hasLoaded }) {
+export default function Loader({ hasLoaded }) {
   const [arc, setArc] = useState(0);
   const [hasCompleted, setHasCompleted] = useState(false);
   const [globalAlpha, setGlobalAlpha] = useState(1.0);
