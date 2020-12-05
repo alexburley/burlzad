@@ -1,10 +1,11 @@
 import React from "react";
+import "./ContactContent.css";
 
 export default function ContactContent() {
   return (
     <p>
-      This page will show some links to contact on linkedin and maybe a little
-      bit more about my self.{" "}
+      If you want to get in touch, you can contact me on{" "}
+      <a href="https://www.linkedin.com/in/alex-burley-083001103/">LinkedIn</a>.
     </p>
   );
 }

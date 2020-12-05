@@ -8,7 +8,7 @@ export default function Loader({ hasLoaded }) {
 
   const dpr = window.devicePixelRatio || 1;
   const canvas = useRef(null);
-  const styleWidth = 900;
+  const styleWidth = 800;
   const styleHeight = 450;
   const canvasWidth = styleWidth * dpr;
   const canvasHeight = styleHeight * dpr;
@@ -82,7 +82,6 @@ export default function Loader({ hasLoaded }) {
   }, [hasCompleted]);
 
   useEffect(() => {
-    console.log(globalAlpha);
     if (globalAlpha <= 0) {
       hasLoaded(true);
     }

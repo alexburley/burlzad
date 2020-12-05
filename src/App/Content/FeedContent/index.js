@@ -1,10 +1,16 @@
 import React from "react";
+import FeedItem from "./FeedItem";
+import items from "./items";
 
 export default function FeedContent() {
   return (
-    <p>
-      This is the feed. It will contain static content that I've
-      generated....somehow.
-    </p>
+    <div>
+      {items.map((item) => (
+        <div>
+          <FeedItem item={item} />
+          <hr />
+        </div>
+      ))}
+    </div>
   );
 }
