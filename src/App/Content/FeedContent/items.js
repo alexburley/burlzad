@@ -1,6 +1,10 @@
 export default [
   {
     date: Date.now(),
+    text: "Typescript types are so hacky, it takes away so much.",
+  },
+  {
+    date: Date.now(),
     text:
       "Sorry if I have unfollowed you on social media. It isn't personal, I just didn't realise you could 'hide' content.",
   },

@@ -4,6 +4,7 @@ import FeedContent from "./FeedContent";
 import WhipsnapContent from "./WhipsnapContent";
 import ContactContent from "./ContactContent";
 import LoaderContent from "./LoaderContent";
+import BooksContent from "./BooksContent";
 
 export default function Content({ content }) {
   if (content === "feed") {
@@ -17,6 +18,9 @@ export default function Content({ content }) {
   }
   if (content === "loader") {
     return <LoaderContent />;
+  }
+  if (content === "books") {
+    return <BooksContent />;
   }
   return <FeedContent />;
 }

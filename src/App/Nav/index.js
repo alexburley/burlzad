@@ -7,6 +7,7 @@ const CONTENT = {
   LOADER: "loader",
   WHIPSNAP: "whipsnap",
   CONTACT: "contact",
+  BOOKS: "books",
 };
 
 export default function Nav({ content, setContent }) {
@@ -30,6 +31,11 @@ export default function Nav({ content, setContent }) {
       <NavItem
         content={"Contact"}
         identifer={CONTENT.CONTACT}
+        onSubmit={setContent}
+      />
+      <NavItem
+        content={"Books"}
+        identifer={CONTENT.BOOKS}
         onSubmit={setContent}
       />
     </div>
