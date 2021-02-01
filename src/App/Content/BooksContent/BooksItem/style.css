@@ -1,0 +1,32 @@
+.BooksItem {
+  text-align: left;
+  padding: 40px;
+  display: inline;
+}
+.BookYear {
+  display: inline-block;
+}
+
+.BookLabel {
+  text-align: center;
+}
+
+.BookTitle {
+  font-size: 14px;
+}
+
+.BookBy {
+  font-size: 12px;
+}
+
+.BookAuthor {
+  font-size: 12px;
+}
+
+.Book {
+  width: 100px;
+}
+
+.BookImage {
+  width: 100%;
+}

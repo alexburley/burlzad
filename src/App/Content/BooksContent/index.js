@@ -3,6 +3,7 @@ import BooksItem from "./BooksItem";
 import items from "./items";
 
 export default function Books() {
+  console.log(items);
   return (
     <div>
       {items.map((item) => (
