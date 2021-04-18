@@ -41,43 +41,50 @@ export default [
       "https://images-eu.ssl-images-amazon.com/images/I/61APhXCksuL._SX218_BO1,204,203,200_QL40_ML2_.jpg",
   },
   {
-    title: "Harry Potter and the Philosopher's Stone",
+    title: "Sapiens - Audiobook",
+    yearRead: 2018,
+    author: "Yuval Noah Harari",
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/41yu2qXhXXL._SX324_BO1,204,203,200_.jpg",
+  },
+  {
+    title: "Harry Potter and the Philosopher's Stone - Audiobook",
     yearRead: 2018,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/51UoqRAxwEL.jpg",
   },
   {
-    title: "Harry Potter and the Chamber of Secrets",
+    title: "Harry Potter and the Chamber of Secrets - Audiobook",
     yearRead: 2018,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/51TA3VfN8RL._SY346_.jpg",
   },
   {
-    title: "Harry Potter and the Prisoner of Azkaban",
+    title: "Harry Potter and the Prisoner of Azkaban - Audiobook",
     yearRead: 2018,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/51Dfqo6jR5L.jpg",
   },
   {
-    title: "Harry Potter and the Goblet of the Fire",
+    title: "Harry Potter and the Goblet of the Fire - Audiobook",
     yearRead: 2018,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/51Vjb2qJwzL.jpg",
   },
   {
-    title: "Harry Potter and the Order of the Phoenix",
+    title: "Harry Potter and the Order of the Phoenix - Audiobook",
     yearRead: 2018,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/51-SI2+aQ2L.jpg",
   },
   {
-    title: "Harry Potter and the Half-Blood Prince",
+    title: "Harry Potter and the Half-Blood Prince - Audiobook",
     yearRead: 2019,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/51myHyjJsyL._SY346_.jpg",
   },
   {
-    title: "Harry Potter and the Deathly Hallows",
+    title: "Harry Potter and the Deathly Hallows - Audiobook",
     yearRead: 2019,
     author: "J.K. Rowling",
     imgSrc: "https://m.media-amazon.com/images/I/511DhzIj4cL._SY346_.jpg",
@@ -130,6 +137,13 @@ export default [
     author: "Ursula K. Le Guin",
     imgSrc:
       "https://images-eu.ssl-images-amazon.com/images/I/51iQfxB5rHL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
+    title: "Leviathan Wakes",
+    yearRead: 2019,
+    author: "James S. A. Corey",
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/511RTVPcqaL._SX317_BO1,204,203,200_.jpg",
   },
   {
     title: "Tombs of Atuan",
