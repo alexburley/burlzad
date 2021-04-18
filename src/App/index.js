@@ -3,7 +3,7 @@ import "./App.css";
 import Content from "./Content";
 import Nav from "./Nav/index";
 function App() {
-  const [content, setContent] = useState("feed");
+  const [content, setContent] = useState("home");
   return (
     <div className="app">
       <meta

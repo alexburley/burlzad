@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import NavItem from "./NavItem";
 import "./Nav.css";
 
@@ -14,29 +14,18 @@ export default function Nav({ content, setContent }) {
   return (
     <div className="navbar">
       <NavItem
-        content={"Feed"}
+        content={"Home"}
         identifer={CONTENT.FEED}
-        onSubmit={setContent}
-      />
-      <NavItem
-        content={"Loader"}
-        identifer={CONTENT.LOADER}
-        onSubmit={setContent}
-      />
-      <NavItem
-        content={"Projects"}
-        identifer={CONTENT.WHIPSNAP}
-        onSubmit={setContent}
-      />
-      <span>Alex Burley</span>
-      <NavItem
-        content={"Contact"}
-        identifer={CONTENT.CONTACT}
         onSubmit={setContent}
       />
       <NavItem
         content={"Books"}
         identifer={CONTENT.BOOKS}
+        onSubmit={setContent}
+      />
+      <NavItem
+        content={"Contact"}
+        identifer={CONTENT.CONTACT}
         onSubmit={setContent}
       />
     </div>
