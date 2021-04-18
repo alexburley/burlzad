@@ -15,14 +15,17 @@ const mapItem = (items) => {
 
 export default function Books() {
   const years = mapItem(items);
-  return Object.keys(years).map((year) => {
-    return (
-      <div className="YearContainer">
-        <h3>{year}</h3>
-        {years[year].map((book) => {
-          return <BooksItem item={book} />;
-        })}
-      </div>
-    );
-  });
+  return Object.keys(years)
+    .sort()
+    .reverse()
+    .map((year) => {
+      return (
+        <div className="YearContainer">
+          <h3>{year}</h3>
+          {years[year].map((book) => {
+            return <BooksItem item={book} />;
+          })}
+        </div>
+      );
+    });
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import "./NavItem.css";
 
 export default function NavItem({ content, onSubmit, identifer }) {
