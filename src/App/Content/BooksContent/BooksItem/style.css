@@ -1,8 +1,9 @@
 .BooksItem {
   text-align: left;
   padding: 40px;
-  display: inline;
+  display: inline-flex;
 }
+
 .BookYear {
   display: inline-block;
 }
@@ -28,5 +29,5 @@
 }
 
 .BookImage {
-  width: 100%;
+  width: 100px;
 }

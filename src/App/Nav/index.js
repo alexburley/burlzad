@@ -24,10 +24,11 @@ export default function Nav({ content, setContent }) {
         onSubmit={setContent}
       />
       <NavItem
-        content={"Whipsnap"}
+        content={"Projects"}
         identifer={CONTENT.WHIPSNAP}
         onSubmit={setContent}
       />
+      <span>Alex Burley</span>
       <NavItem
         content={"Contact"}
         identifer={CONTENT.CONTACT}
