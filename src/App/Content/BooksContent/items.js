@@ -146,6 +146,27 @@ export default [
       "https://images-na.ssl-images-amazon.com/images/I/511RTVPcqaL._SX317_BO1,204,203,200_.jpg",
   },
   {
+    title: "Down Under",
+    yearRead: 2020,
+    author: "Bill Bryson",
+    imgSrc:
+      "https://images-eu.ssl-images-amazon.com/images/I/51PSH4K4amL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
+    title: "Natives",
+    yearRead: 2020,
+    author: "Akala",
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/51ya6G0fWUL._SX324_BO1,204,203,200_.jpg",
+  },
+  {
+    title: "Fire and Blood",
+    yearRead: 2020,
+    author: "George RR Martin",
+    imgSrc:
+      "https://images-eu.ssl-images-amazon.com/images/I/51RVf7KG8fL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
     title: "Tombs of Atuan",
     yearRead: 2020,
     author: "Ursula K. Le Guin",
