@@ -20,11 +20,13 @@ export default function Books() {
     .reverse()
     .map((year) => {
       return (
-        <div className="YearContainer">
-          <h3>{year}</h3>
-          {years[year].map((book) => {
-            return <BooksItem item={book} />;
-          })}
+        <div className="BooksContent">
+          <div className="YearContainer">
+            <h3>{year}</h3>
+            {years[year].map((book) => {
+              return <BooksItem item={book} />;
+            })}
+          </div>
         </div>
       );
     });

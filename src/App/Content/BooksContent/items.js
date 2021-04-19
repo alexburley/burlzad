@@ -204,21 +204,21 @@ export default [
   {
     title: "The Gathering Storm",
     yearRead: 2021,
-    author: "Robert Jordan and Brandon Sanderson",
+    author: "Robert Jordan & Brandon Sanderson",
     imgSrc:
       "https://images-na.ssl-images-amazon.com/images/I/51QSYtr6NtL._SX316_BO1,204,203,200_.jpg",
   },
   {
     title: "Towers of Midnight",
     yearRead: 2021,
-    author: "Robert Jordan and Brandon Sanderson",
+    author: "Robert Jordan & Brandon Sanderson",
     imgSrc:
       "https://images-eu.ssl-images-amazon.com/images/I/51qQPiz8q0L._SY291_BO1,204,203,200_QL40_ML2_.jpg",
   },
   {
     title: "A Memory of Light",
     yearRead: 2021,
-    author: "Robert Jordan and Brandon Sanderson",
+    author: "Robert Jordan & Brandon Sanderson",
     imgSrc:
       "https://images-eu.ssl-images-amazon.com/images/I/51re3ONzSBL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
   },

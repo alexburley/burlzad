@@ -1,4 +1,9 @@
 .YearContainer {
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 25px;
+}
+
+.BooksContent {
+  padding-top: 25px;
 }
