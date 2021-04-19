@@ -11,7 +11,7 @@
 .BookLabel {
   vertical-align: bottom;
   text-align: center;
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .BookTitle {
@@ -23,7 +23,9 @@
 }
 
 .BookAuthor {
+  padding-top: 5px;
   font-size: 12px;
+  text-align: center;
 }
 
 .Book {

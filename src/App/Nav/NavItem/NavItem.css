@@ -20,3 +20,16 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+button:hover,
+button:focus {
+  background: #282c34;
+}
+
+button:focus {
+  outline: 0px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
