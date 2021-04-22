@@ -33,4 +33,6 @@
   margin-right: auto;
   display: block;
   height: 250px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
 }
