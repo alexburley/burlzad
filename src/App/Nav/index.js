@@ -17,11 +17,11 @@ export default function Nav({ content, setContent }) {
         identifer={CONTENT.FEED}
         onSubmit={setContent}
       />
-      <NavItem
+      {/* <NavItem
         content={"Skills"}
         identifer={CONTENT.SKILLS}
         onSubmit={setContent}
-      />
+      /> */}
       <NavItem
         content={"Books"}
         identifer={CONTENT.BOOKS}

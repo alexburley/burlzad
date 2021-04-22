@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Card,
-  Container,
-  CardContent,
-  Typography,
-  Button,
-  CardActions,
-} from "@material-ui/core";
+import { Card, Container, CardContent, Typography } from "@material-ui/core";
 import "./SkillsContent.css";
 
 export default function SkillsContent() {
