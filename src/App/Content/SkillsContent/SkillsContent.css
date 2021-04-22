@@ -1,0 +1,17 @@
+.CardContent {
+  background-color: #424242;
+  /* color: #90ee90; */
+}
+
+.CardAction {
+  background-color: lightgrey;
+  color: #90ee90;
+}
+
+.ProfileContent {
+  padding-top: 20px;
+}
+
+/* .Card {
+  width: 50px;
+} */

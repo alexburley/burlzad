@@ -4,8 +4,7 @@ import "./Nav.css";
 
 const CONTENT = {
   FEED: "feed",
-  LOADER: "loader",
-  WHIPSNAP: "whipsnap",
+  SKILLS: "skills",
   CONTACT: "contact",
   BOOKS: "books",
 };
@@ -16,6 +15,11 @@ export default function Nav({ content, setContent }) {
       <NavItem
         content={"Home"}
         identifer={CONTENT.FEED}
+        onSubmit={setContent}
+      />
+      <NavItem
+        content={"Skills"}
+        identifer={CONTENT.SKILLS}
         onSubmit={setContent}
       />
       <NavItem
