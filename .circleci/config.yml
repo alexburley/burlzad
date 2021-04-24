@@ -1,14 +1,19 @@
 version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@2.0.0
 jobs:
-  build:
-    docker:
-      - image: 'cimg/node:16.0.0'
+  build-and-deploy:
+    executor: aws-cli/default
     steps:
       - checkout
+      - aws-cli/setup:
+          aws-region: eu-west-1
+          aws-access-key-id: ''
+      - run: echo "Run your code here"
       - run: npm i
       - run: ./deploy.sh
 
 workflows:
   deploy:
     jobs:
-      - build
+      - build-and-deploy
