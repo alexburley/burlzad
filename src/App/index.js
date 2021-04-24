@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { Container, CssBaseline } from "@material-ui/core";
 import Nav from "./Navigation";
-import { Home } from "./Pages";
+import { Books, Home, Skills } from "./Pages";
 
 const theme = createMuiTheme({
   palette: {
@@ -26,20 +26,25 @@ const theme = createMuiTheme({
   },
 });
 
+const renderPage = (page) => {
+  if (page === "home") {
+    return <Home />;
+  } else if (page === "skills") {
+    return <Skills />;
+  } else if (page === "books") {
+    return <Books />;
+  }
+  return <div>Error</div>;
+};
+
 function App() {
-  const [content, setContent] = useState(Home);
+  const [page, setPage] = useState("home");
   return (
-    <div className="app">
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-      ></meta>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Nav onClick={setContent} />
-        <Container maxWidth="md">{content}</Container>;
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Nav onClick={setPage} />
+      <Container maxWidth="md">{renderPage(page)}</Container>;
+    </ThemeProvider>
   );
 }
 

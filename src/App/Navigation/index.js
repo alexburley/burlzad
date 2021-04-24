@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import { Books, Contact, Home, Skills } from "../Pages";
 
 const useStyles = makeStyles({
   center: {
@@ -19,10 +18,9 @@ export default function Navigation({ onClick }) {
   const setPage = set(onClick);
   return (
     <div className={`${classes.center} ${classes.nav}`}>
-      <Button onClick={setPage(Home)}>Home</Button>
-      <Button onClick={setPage(Skills)}>Skills</Button>
-      <Button onClick={setPage(Books)}>Books</Button>
-      <Button onClick={setPage(Contact)}>Contact</Button>
+      <Button onClick={setPage("home")}>Home</Button>
+      <Button onClick={setPage("skills")}>Skills</Button>
+      <Button onClick={setPage("books")}>Books</Button>
     </div>
   );
 }
