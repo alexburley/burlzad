@@ -7,9 +7,9 @@ jobs:
     steps:
       - checkout
       - aws-cli/setup:
-          aws-region: eu-west-1
-          aws-access-key-id: ''
-      - run: echo "Run your code here"
+          aws-region: burlzadRegion
+          aws-access-key-id: burlzadDeployerId
+          aws-secret-access-key: burlzadDeployerKey
       - run: npm i
       - run: ./deploy.sh
 
