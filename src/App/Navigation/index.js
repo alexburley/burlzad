@@ -22,7 +22,7 @@ export default function Navigation() {
         <Button>Home</Button>
       </Link>
       <Link to="/profile">
-        <Button>Skills</Button>
+        <Button>Profile</Button>
       </Link>
       <Link to="/books">
         <Button>Books</Button>
