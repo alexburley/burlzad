@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { Container, CssBaseline } from "@material-ui/core";
 import Nav from "./Navigation";
-import { Books, Home, Profile } from "./Pages";
+import { Books, Home } from "./Pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const theme = createMuiTheme({

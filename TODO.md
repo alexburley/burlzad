@@ -4,3 +4,6 @@
 - Profile Page - Projects: whipsnap, wedding, personal website
 - Filtering of books
 - Deploy script
+- Circle CI
+- Favicon
+- Upload book images to s3
