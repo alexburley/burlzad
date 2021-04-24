@@ -1,0 +1,6 @@
+- Feed served via API
+- Profile Page - Statement
+- Profile Page - skills
+- Profile Page - Projects: whipsnap, wedding, personal website
+- Filtering of books
+- Deploy script
