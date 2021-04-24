@@ -8,10 +8,13 @@ const useStyles = makeStyles({
   },
   nav: {
     padding: "20px 0px 5px 0px",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
   },
 });
 
-export default function Navigation({ onClick }) {
+export default function Navigation() {
   const classes = useStyles();
   return (
     <div className={`${classes.center} ${classes.nav}`}>

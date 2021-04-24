@@ -20,6 +20,10 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
     paddingBottom: "25px",
   },
+  books: {
+    display: "inline-flex",
+    flexWrap: "wrap",
+  },
   year: {
     paddingLeft: 30,
     paddingBottom: 10,
@@ -32,15 +36,17 @@ export default function Books() {
   return Object.keys(years)
     .sort()
     .reverse()
-    .map((year) => {
+    .map((year, index) => {
       return (
-        <div className={classes.section}>
+        <div className={classes.section} key={index}>
           <Typography variant="h3" className={classes.year}>
             {year}
           </Typography>
-          {years[year].map((book, index) => {
-            return <Book item={book} key={index} />;
-          })}
+          <div className={classes.books}>
+            {years[year].map((book, index) => {
+              return <Book item={book} key={index} />;
+            })}
+          </div>
         </div>
       );
     });
