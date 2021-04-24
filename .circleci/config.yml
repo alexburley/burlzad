@@ -12,15 +12,16 @@ orbs:
   # See here https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project
   aws-s3: circleci/aws-s3@2.0
 
+jobs:
+  build:
+    docker:
+      - image: 'node/node:12'
+    steps:
+      - checkout
+      - run: npm i
+      - run: ./deploy.sh
+
 workflows:
-  sample:
+  deploy:
     jobs:
-      - node/test:
-          version: '15.1'
-          # after the node/test job completes, build the dist packages and save them to a workspace
-          post-steps:
-            - run: npm run build
-            - aws-s3/copy:
-                from: build/
-                to: s3://burlzad
-                arguments: --recursive
+      - "node/test"
