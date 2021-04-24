@@ -3,14 +3,22 @@ import React from "react";
 
 const useStyles = makeStyles({
   book: { textAlign: "left", padding: 5 },
-  author: { paddingTop: 5, fontSize: 12, textAlign: "center" },
   image: {
     marginLeft: "auto",
     marginRight: "auto",
     display: "block",
-    height: 250,
-    border: "1px solid lightgray",
+    maxHeight: 200,
+    // maxWidth: 150,
+    border: "0.5px solid lightgray",
     borderRadius: 10,
+  },
+  label: {
+    textAlign: "center",
+    maxWidth: 150,
+  },
+  title: {
+    lineHeight: 1.5,
+    paddingTop: 5,
   },
 });
 
@@ -19,19 +27,14 @@ export default function BooksItem({ item }) {
   return (
     <div className={classes.book}>
       <img className={classes.image} alt={item.title} src={item.imgSrc}></img>
-      <div>
-        <Typography
-          display="block"
-          variant="subtitle1"
-          className={classes.title}
-        >
+      <div className={classes.label}>
+        <Typography variant="subtitle1" className={classes.title}>
           {item.title}
         </Typography>
+        <Typography variant="subtitle2" className={classes.author}>
+          {item.author}
+        </Typography>
       </div>
-
-      {/* <div className={classes.label}>
-        <div className={classes.author}>{item.author}</div> */}
-      {/* </div> */}
     </div>
   );
 }
