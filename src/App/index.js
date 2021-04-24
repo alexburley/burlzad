@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { Container, CssBaseline } from "@material-ui/core";
 import Nav from "./Navigation";
 import { Books, Home, Skills } from "./Pages";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const theme = createMuiTheme({
   palette: {
@@ -26,24 +27,31 @@ const theme = createMuiTheme({
   },
 });
 
-const renderPage = (page) => {
-  if (page === "home") {
-    return <Home />;
-  } else if (page === "skills") {
-    return <Skills />;
-  } else if (page === "books") {
-    return <Books />;
-  }
-  return <div>Error</div>;
-};
-
 function App() {
-  const [page, setPage] = useState("home");
   return (
     <ThemeProvider theme={theme}>
+      <Router>
+        <Nav />
+        <Container maxWidth="md">
+          <div>
+            {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+            <Switch>
+              <Route path="/books">
+                <Books />
+              </Route>
+              <Route path="/profile">
+                <Skills />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+        </Container>
+        ;
+      </Router>
       <CssBaseline />
-      <Nav onClick={setPage} />
-      <Container maxWidth="md">{renderPage(page)}</Container>;
     </ThemeProvider>
   );
 }
