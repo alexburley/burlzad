@@ -23,7 +23,7 @@ export default function () {
         Alex Burley
       </Typography>
       <Typography variant="h4" className={`${classes["banner-h4"]}`}>
-        Backend Software Engineer | Testing Evangelist
+        Backend Software Engineer
       </Typography>
       <div className={classes.icons}>
         <span>
