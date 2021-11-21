@@ -1,7 +1,7 @@
 import { Card, CardContent, Container, Typography } from "@material-ui/core";
 import React from "react";
 
-export default function FeedContent() {
+export default function ProfilePage() {
   return (
     <div className="IntroBox">
       <p>

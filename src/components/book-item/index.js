@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BooksItem({ item }) {
+export default function BookItem({ item }) {
   const classes = useStyles();
   return (
     <div className={classes.book}>

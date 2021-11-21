@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Navigation() {
+export default function NavigationBar() {
   const classes = useStyles();
   return (
     <div className={`${classes.center} ${classes.nav}`}>

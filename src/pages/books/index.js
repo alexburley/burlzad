@@ -1,5 +1,5 @@
 import React from "react";
-import Book from "./Book";
+import Book from "../../components/book-item";
 import items from "./items";
 import { makeStyles, Typography } from "@material-ui/core";
 
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Books() {
+export default function BooksPage() {
   const classes = useStyles();
   const years = mapItem(items);
   return Object.keys(years)
