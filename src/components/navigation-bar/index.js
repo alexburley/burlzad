@@ -25,22 +25,22 @@ export default function NavigationBar() {
 const NavLinkStyled = styled(NavLink)`
   width: 50px;
   text-decoration: none;
-  color: white;
+  color: var(--color-text-primary);
   font-size: 1.25rem;
 
   span:hover {
-    color: yellow;
+    color: var(--color-secondary);
   }
 
   span {
     padding-bottom: 4px;
-    border-bottom: ${(props) => (props.active ? "solid 2px yellow" : "")};
+    border-bottom: ${(props) =>
+      props.active ? "solid 2px var(--color-secondary)" : ""};
   }
 `;
 
 const Nav = styled.nav`
   text-align: center;
-  padding: "20px 0px 5px 0px";
   display: flex;
   justify-content: center;
   align-items: center;
