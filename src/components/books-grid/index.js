@@ -25,8 +25,10 @@ export default function BooksGrid({ items }) {
               return (
                 <BookItem>
                   <BookImage alt={title} src={imgSrc}></BookImage>
-                  <BookTitle>{title}</BookTitle>
-                  <BookAuthor>{author}</BookAuthor>
+                  <BookCaption>
+                    <BookTitle>{title}</BookTitle>
+                    <BookAuthor>{author}</BookAuthor>
+                  </BookCaption>
                 </BookItem>
               );
             })}
@@ -59,12 +61,17 @@ const BookItem = styled.article`
   flex: 0 1 120px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 12px;
 `;
 
 const BookImage = styled.img`
   width: 100%;
+  height: 150px;
+`;
+
+const BookCaption = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const BookTitle = styled.span`
