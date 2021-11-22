@@ -1,32 +1,49 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
-const useStyles = makeStyles({
-  center: {
-    "text-align": "center",
-  },
-  nav: {
-    padding: "20px 0px 5px 0px",
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-  },
-});
+import { NavLink, useLocation } from "react-router-dom";
+import styled from "styled-components";
 
 export default function NavigationBar() {
-  const classes = useStyles();
-  return (
-    <div className={`${classes.center} ${classes.nav}`}>
-      <Link to="/">
-        <Button>Home</Button>
-      </Link>
-      <Link to="/profile">
-        <Button>Profile</Button>
-      </Link>
-      <Link to="/books">
-        <Button>Books</Button>
-      </Link>
-    </div>
-  );
+  const location = useLocation();
+  const links = [
+    ["/", "Home"],
+    ["/profile", "Profile"],
+    ["/books", "Library"],
+  ].map(([route, title]) => {
+    return (
+      <NavLinkStyled
+        active={location.pathname === route}
+        to={route}
+        key={route}
+      >
+        <span>{title}</span>
+      </NavLinkStyled>
+    );
+  });
+  return <Nav>{links}</Nav>;
 }
+
+const NavLinkStyled = styled(NavLink)`
+  width: 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+
+  span:hover {
+    color: yellow;
+  }
+
+  span {
+    padding-bottom: 4px;
+    border-bottom: ${(props) => (props.active ? "solid 2px yellow" : "")};
+  }
+`;
+
+const Nav = styled.nav`
+  text-align: center;
+  padding: "20px 0px 5px 0px";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  gap: 24px;
+`;
