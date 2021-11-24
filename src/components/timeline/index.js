@@ -3,20 +3,28 @@ import styled from "styled-components";
 
 const ONE_MONTH_IN_MILLISECONDS = 1000 * 60 * 60 * 24 * 30;
 
+const getConnectorHeight = (current, previous) => {
+  const dateDifference = previous.getTime() - current.getTime();
+  const steps = Math.floor(dateDifference / ONE_MONTH_IN_MILLISECONDS);
+  const connectorHeight = steps * 10;
+  const maxHeight = 240;
+  const minHeight = 10;
+
+  if (connectorHeight > maxHeight) return maxHeight;
+  else if (connectorHeight < minHeight) return minHeight;
+  else return connectorHeight;
+};
+
 export default function Timeline({ items = [] }) {
   return (
     <Wrapper>
       {items.map(({ date, label }, index) => {
         const { date: previousDate } = items[index - 1] || { date: new Date() };
-        const dateDifference = previousDate.getTime() - date.getTime();
-        const steps = Math.floor(dateDifference / ONE_MONTH_IN_MILLISECONDS);
-        const connectorHeight = steps * 10;
-        const maxHeight = 240;
         return (
           <Section key={index}>
             <Connector
               end={!index}
-              height={connectorHeight > maxHeight ? maxHeight : connectorHeight}
+              height={getConnectorHeight(date, previousDate)}
             />
             <Node>
               <NodeOrb tooltip={date} color={"hsla(52, 100%, 45%, 1)"} />
