@@ -1,4 +1,3 @@
-import { Card, CardContent, Container, Typography } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
 
@@ -8,14 +7,94 @@ const Wrapper = styled.div`
 
 const SideColumn = styled.div`
   flex: 1 0 160px;
+  max-width: 35%;
+  display: flex;
+`;
+
+const AccentColorBlock = styled.div`
+  background-color: ${(props) => props.color};
+  align-self: center;
+  height: 10px;
+  width: 10px;
+`;
+
+const Date = styled.span``;
+const Employer = styled.span`
+  align-self: center;
+`;
+
+const EmployerWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+const RolesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 `;
 
 const MainContent = styled.div``;
 
+const TimelineConnector = styled.div`
+  background-color: white;
+  width: 2px;
+  height: 50px;
+  border-radius: ${(props) => (props.end ? "2px" : "0px")};
+`;
+
+const TimelineNodeWrapper = styled.div`
+  display: flex;
+  position: relative;
+`;
+
+const TimelineNode = styled.div`
+  background-color: white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: -5px;
+
+  :hover {
+    background-color: ${(p) => p.color};
+  }
+`;
+
+const Role = styled.span`
+  height: 0px;
+  margin-left: 16px;
+  font-size: 16px;
+  line-height: 12px;
+`;
+
 export default function ProfilePage() {
   return (
     <Wrapper>
-      <SideColumn></SideColumn>
+      <SideColumn>
+        <EmployerWrapper>
+          <AccentColorBlock color={"hsla(52, 100%, 45%, 1)"} />
+          <Employer>Reach PLC</Employer>
+          <RolesWrapper>
+            <TimelineConnector end={true} />
+            <TimelineNodeWrapper>
+              <TimelineNode
+                tooltip={"July 2019"}
+                color={"hsla(52, 100%, 45%, 1)"}
+              />
+              <Role>Senior Full Stack Engineer</Role>
+            </TimelineNodeWrapper>
+            <TimelineConnector />
+            <TimelineNodeWrapper>
+              <TimelineNode
+                tooltip={"July 2018"}
+                color={"hsla(52, 100%, 45%, 1)"}
+              />
+              <Role>Full Stack Engineer</Role>
+            </TimelineNodeWrapper>
+          </RolesWrapper>
+        </EmployerWrapper>
+      </SideColumn>
+      <MainContent></MainContent>
     </Wrapper>
     // <div className="IntroBox">
     //   <p>
