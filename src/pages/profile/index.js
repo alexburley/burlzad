@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Timeline from "../../components/timeline";
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,90 +10,26 @@ const SideColumn = styled.div`
   flex: 1 0 160px;
   max-width: 35%;
   display: flex;
-`;
-
-const AccentColorBlock = styled.div`
-  background-color: ${(props) => props.color};
-  align-self: center;
-  height: 10px;
-  width: 10px;
-`;
-
-const Date = styled.span``;
-const Employer = styled.span`
-  align-self: center;
-`;
-
-const EmployerWrapper = styled.div`
-  display: flex;
-  gap: 20px;
-`;
-
-const RolesWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
+  padding: 36px;
 `;
 
 const MainContent = styled.div``;
 
-const TimelineConnector = styled.div`
-  background-color: white;
-  width: 2px;
-  height: 50px;
-  border-radius: ${(props) => (props.end ? "2px" : "0px")};
-`;
-
-const TimelineNodeWrapper = styled.div`
-  display: flex;
-  position: relative;
-`;
-
-const TimelineNode = styled.div`
-  background-color: white;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  margin-left: -5px;
-
-  :hover {
-    background-color: ${(p) => p.color};
-  }
-`;
-
-const Role = styled.span`
-  height: 0px;
-  margin-left: 16px;
-  font-size: 16px;
-  line-height: 12px;
-`;
+const roles = [
+  { date: new Date(2021, 10), label: "Senior Full Stack Engineer" },
+  { date: new Date(2020, 10), label: "Full Stack Engineer" },
+  { date: new Date(2019, 7), label: "Solutions Engineer" },
+  { date: new Date(2018, 9), label: "SDE II" },
+  { date: new Date(2017, 9), label: "Tesco Technology Graduate" },
+  { date: new Date(2017, 7), label: "Graduate - Computer Science MComp 1st" },
+  { date: new Date(2013, 9), label: "Student" },
+];
 
 export default function ProfilePage() {
   return (
     <Wrapper>
       <SideColumn>
-        <EmployerWrapper>
-          <AccentColorBlock color={"hsla(52, 100%, 45%, 1)"} />
-          <Employer>Reach PLC</Employer>
-          <RolesWrapper>
-            <TimelineConnector end={true} />
-            <TimelineNodeWrapper>
-              <TimelineNode
-                tooltip={"July 2019"}
-                color={"hsla(52, 100%, 45%, 1)"}
-              />
-              <Role>Senior Full Stack Engineer</Role>
-            </TimelineNodeWrapper>
-            <TimelineConnector />
-            <TimelineNodeWrapper>
-              <TimelineNode
-                tooltip={"July 2018"}
-                color={"hsla(52, 100%, 45%, 1)"}
-              />
-              <Role>Full Stack Engineer</Role>
-            </TimelineNodeWrapper>
-          </RolesWrapper>
-        </EmployerWrapper>
+        <Timeline items={roles} />
       </SideColumn>
       <MainContent></MainContent>
     </Wrapper>
