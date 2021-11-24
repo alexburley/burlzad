@@ -52,5 +52,7 @@ const NodeLabel = styled.span`
   height: 0px;
   margin-left: 16px;
   font-size: 16px;
-  line-height: 12px;
+  line-height: 22px;
+  margin-top: -6px;
+  flex: 0 1 200px;
 `;
