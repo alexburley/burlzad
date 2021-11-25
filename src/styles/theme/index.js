@@ -2,9 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 const Theme = createGlobalStyle`
   :root {
-    --color-background-dark: #121212;
+    --color-background-dark: hsl(0, 0%, 10%);
+    --color-background-light-dark: hsl(0, 0%, 15%);
+    --color-background-light-light-dark: hsl(0, 0%, 20%);
     --color-text-primary: #fff;
-    --color-secondary: #FBBF24
+    --color-secondary: hsl(43, 96%, 56%)
   }
 
   body {

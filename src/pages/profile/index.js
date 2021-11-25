@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Container from "../../components/container";
 import Timeline from "../../components/timeline";
 
 const Wrapper = styled.div`
@@ -10,10 +11,38 @@ const SideColumn = styled.div`
   flex: 1 0 160px;
   max-width: 35%;
   display: flex;
-  padding: 36px;
+  padding: 18px;
+  padding-top: 0px;
 `;
 
-const MainContent = styled.div``;
+const MainContent = styled.div`
+  max-width: 55%;
+`;
+
+const SkillsGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+`;
+
+const Card = styled.div`
+  background-color: var(--color-background-light-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 0 1 300px;
+`;
+
+const CardHeader = styled.div`
+  background-color: var(--color-background-light-light-dark);
+  width: 100%;
+  padding: 8px 16px;
+`;
+
+const CardBody = styled.div`
+  width: 100%;
+  padding: 16px;
+  height: 100%;
+`;
 
 const roles = [
   { date: new Date(2021, 10), label: "Senior Full Stack Engineer" },
@@ -27,18 +56,34 @@ const roles = [
 
 export default function ProfilePage() {
   return (
-    <Wrapper>
-      <SideColumn>
-        <Timeline items={roles} />
-      </SideColumn>
-      <MainContent></MainContent>
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        <SideColumn>
+          <Timeline items={roles} />
+        </SideColumn>
+        <MainContent>
+          <SkillsGrid>
+            <Card>
+              <CardHeader>JS/TS</CardHeader>
+              <CardBody>Advanced JS development</CardBody>
+            </Card>
+            <Card>
+              <CardHeader>AWS</CardHeader>
+              <CardBody>Advanced cloud development</CardBody>
+            </Card>
+            <Card>
+              <CardHeader>Testing</CardHeader>
+              <CardBody>Knowledgeble Tester</CardBody>
+            </Card>
+          </SkillsGrid>
+        </MainContent>
+      </Wrapper>
+    </Container>
     // <div className="IntroBox">
-    //   <p>
-    //     My name is Alex, I am a backend developer specialising in distributed,
-    //     serverless systems. I care about strong unit testing, scalability and
-    //     data driven approaches.
-    //   </p>
+    //
+    // My name is Alex, I am a backend developer specialising in
+    // distributed, serverless systems. I care about strong unit testing,
+    // scalability and data driven approaches.
     //   <p>
     //     I'm currently working in a Full Stack role at
     //     <a href="https://www.reachplc.com/home"> Reach Plc </a>inside the
