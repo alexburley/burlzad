@@ -42,8 +42,9 @@ const CardContent = styled.div`
 
 const ResetButton = styled(Minimize2)`
   position: absolute;
-  top: 0;
+  top: -18px;
   right: 0;
+  cursor: pointer;
 
   :hover {
     color: var(--color-secondary);

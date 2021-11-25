@@ -33,6 +33,7 @@ const Header = styled.div`
   background-color: var(--color-background-light-light-dark);
   width: 100%;
   padding: 8px 16px;
+  cursor: pointer;
 `;
 
 const Body = styled.div`
