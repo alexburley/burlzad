@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Minimize2 } from "react-feather";
 import Container from "../../components/container";
 import Timeline from "../../components/timeline";
 import Card from "../../components/card";
+import skillsItems from "./skills";
 
 const Wrapper = styled.div`
   display: flex;
   padding-top: 18px;
+  position: relative;
 `;
 
 const SideColumn = styled.div`
@@ -37,6 +40,16 @@ const CardContent = styled.div`
   padding: 8px 16px 16px 16px;
 `;
 
+const ResetButton = styled(Minimize2)`
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  :hover {
+    color: var(--color-secondary);
+  }
+`;
+
 const roles = [
   { date: new Date(2021, 10), label: "Senior Full Stack Engineer" },
   { date: new Date(2020, 10), label: "Full Stack Engineer" },
@@ -47,83 +60,32 @@ const roles = [
   { date: new Date(2013, 9), label: "Student" },
 ];
 
-const skills = [
-  {
-    title: "JS/TS",
-    children: "Expert JavaScript and TypeScript developer",
-  },
-  {
-    title: "API Development",
-    children: "Confident taking a service from nothing to production",
-  },
-  {
-    title: "AWS",
-    children: "Multiple years working with AWS and evangelist for AWS CDK",
-  },
-  {
-    title: "Testing",
-    children:
-      "Testing evangelist with broad experience across many areas of automated testing strategies",
-  },
-  {
-    title: "Serverless",
-    children:
-      "Passionate about serverless technology and experienced using Serverless Framework and AWS CDK",
-  },
-  {
-    title: "Java",
-    children:
-      "Experience using Micronaut and led delivery of a Java based printing service for Tesco Tills",
-  },
-  {
-    title: "React",
-    children:
-      "Confident in building React applications both natively and using NextJS",
-  },
-  {
-    title: "SQL",
-    children: "Working experience of PostgresSQL and common patterns",
-  },
-  {
-    title: "NoSQL",
-    children:
-      "Excited about DynamoDB and single table design. Working experience of MongoDB",
-  },
-  {
-    title: "HTML/CSS",
-    children:
-      "Good knowledge of semantic elements and I actually enjoy writing CSS",
-  },
-  {
-    title: "Agile Development",
-    children:
-      "Interested in maximising value and minimising time to production through agile thought",
-  },
-  {
-    title: "Mentorship",
-    children: "Significant experience mentoring junior developers",
-  },
-  {
-    title: "Open Source",
-    children:
-      "Contributions to Open Source and happy finding myself in completely new projects",
-  },
-  {
-    title: "DevOps",
-    children:
-      "Huge on CI/CD and using AWS Code Pipeline to accomplish that. Experienced with Jenkins",
-  },
-  {
-    title: "General Programming",
-    children:
-      "Proven experience in multiple languages using both OOP and FP design patterns",
-  },
-].map(({ children, ...rest }) => ({
-  ...rest,
-  children: <CardContent>{children}</CardContent>,
-}));
-console.log(skills);
 export default function ProfilePage() {
+  const initialCardState = new Array(skillsItems.length)
+    .map((_, index) => index)
+    .reduce((acc, val) => ({ [val]: false }), {});
+  const [skillCardState, setSkillCardState] = useState(initialCardState);
+
+  const reset = () => {
+    setSkillCardState(initialCardState);
+  };
+  const skills = skillsItems.map(({ children, title }, index) => {
+    return (
+      <StyledCard
+        title={title}
+        key={index}
+        showingChildren={skillCardState[index]}
+        setShowingChildren={() => {
+          setSkillCardState({
+            ...skillCardState,
+            [index]: !skillCardState[index],
+          });
+        }}
+        children={<CardContent>{children}</CardContent>}
+      />
+    );
+  });
+
   return (
     <Container>
       <Wrapper>
@@ -131,11 +93,8 @@ export default function ProfilePage() {
           <Timeline items={roles} />
         </SideColumn>
         <MainContent>
-          <SkillsGrid>
-            {skills.map(({ title, children }) => (
-              <StyledCard title={title} children={children} />
-            ))}
-          </SkillsGrid>
+          <ResetButton onClick={reset} />
+          <SkillsGrid>{skills}</SkillsGrid>
         </MainContent>
       </Wrapper>
     </Container>

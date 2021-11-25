@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-export default function Card({ className, title, children }) {
-  const [showingChildren, setShowingChildren] = useState(false);
-  console.log(showingChildren);
+export default function Card({
+  className,
+  title,
+  children,
+  setShowingChildren,
+  showingChildren,
+}) {
   return (
     <Wrapper className={className}>
       <Header
