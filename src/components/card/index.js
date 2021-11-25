@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export default function Card({ className, title, children }) {
+  const [showingChildren, setShowingChildren] = useState(false);
+  console.log(showingChildren);
   return (
     <Wrapper className={className}>
-      <Header>{title}</Header>
-      <Body>{children}</Body>
+      <Header
+        onClick={() => {
+          setShowingChildren(!showingChildren);
+        }}
+      >
+        {title}
+      </Header>
+      <Body show={showingChildren}>{children}</Body>
     </Wrapper>
   );
 }
@@ -14,6 +22,7 @@ const Wrapper = styled.div`
   background-color: var(--color-background-light-dark);
   border-radius: 8px;
   overflow: hidden;
+  height: fit-content;
 `;
 
 const Header = styled.div`
@@ -24,6 +33,6 @@ const Header = styled.div`
 
 const Body = styled.div`
   width: 100%;
-  padding: 16px;
   height: 100%;
+  display: ${(p) => (p.show ? "" : "none")};
 `;

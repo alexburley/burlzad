@@ -53,7 +53,6 @@ const Connector = styled.div`
 
 const Node = styled.div`
   display: flex;
-  position: relative;
 `;
 
 const NodeOrb = styled.div`
@@ -71,10 +70,11 @@ const NodeOrb = styled.div`
 
 const NodeLabel = styled.span`
   height: 0px;
+  align-self: start;
   margin-left: 16px;
   font-size: 12px;
   line-height: 12px;
-  margin-top: -6px;
+  margin-top: -1px;
   flex: 0 1 200px;
 
   @media (min-width: 600px) {
