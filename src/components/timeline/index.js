@@ -8,7 +8,7 @@ const getConnectorHeight = (current, previous) => {
   const steps = Math.floor(dateDifference / ONE_MONTH_IN_MILLISECONDS);
   const connectorHeight = steps * 10;
   const maxHeight = 240;
-  const minHeight = 10;
+  const minHeight = 30;
 
   if (connectorHeight > maxHeight) return maxHeight;
   else if (connectorHeight < minHeight) return minHeight;
@@ -72,8 +72,13 @@ const NodeOrb = styled.div`
 const NodeLabel = styled.span`
   height: 0px;
   margin-left: 16px;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 12px;
   margin-top: -6px;
   flex: 0 1 200px;
+
+  @media (min-width: 600px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 `;
