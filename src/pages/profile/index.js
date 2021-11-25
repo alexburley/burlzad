@@ -10,7 +10,8 @@ const Wrapper = styled.div`
 `;
 
 const SideColumn = styled.div`
-  flex: 1 0 160px;
+  flex: 0 0 280px;
+  min-width: 200px;
   max-width: 35%;
   display: flex;
   padding: 18px;
@@ -18,13 +19,17 @@ const SideColumn = styled.div`
 `;
 
 const MainContent = styled.div`
-  max-width: 55%;
+  flex: 1;
 `;
 
 const SkillsGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+`;
+
+const StyledCard = styled(Card)`
+  flex: 0 0 280px; ;
 `;
 
 const roles = [
@@ -53,7 +58,7 @@ export default function ProfilePage() {
         <MainContent>
           <SkillsGrid>
             {skills.map(({ title, children }) => (
-              <Card title={title} children={children} />
+              <StyledCard title={title} children={children} />
             ))}
           </SkillsGrid>
         </MainContent>
