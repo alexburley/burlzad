@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Container from "../../components/container";
 import Timeline from "../../components/timeline";
+import Card from "../../components/card";
 
 const Wrapper = styled.div`
   display: flex;
+  padding-top: 18px;
 `;
 
 const SideColumn = styled.div`
@@ -25,25 +27,6 @@ const SkillsGrid = styled.div`
   gap: 16px;
 `;
 
-const Card = styled.div`
-  background-color: var(--color-background-light-dark);
-  border-radius: 8px;
-  overflow: hidden;
-  flex: 0 1 300px;
-`;
-
-const CardHeader = styled.div`
-  background-color: var(--color-background-light-light-dark);
-  width: 100%;
-  padding: 8px 16px;
-`;
-
-const CardBody = styled.div`
-  width: 100%;
-  padding: 16px;
-  height: 100%;
-`;
-
 const roles = [
   { date: new Date(2021, 10), label: "Senior Full Stack Engineer" },
   { date: new Date(2020, 10), label: "Full Stack Engineer" },
@@ -52,6 +35,12 @@ const roles = [
   { date: new Date(2017, 9), label: "Tesco Technology Graduate" },
   { date: new Date(2017, 7), label: "Graduate - Computer Science MComp 1st" },
   { date: new Date(2013, 9), label: "Student" },
+];
+
+const skills = [
+  { title: "JS/TS", children: "Advanced JS development" },
+  { title: "AWS", children: "Advanced cloud development" },
+  { title: "Testing", children: "Knowledgeble Tester" },
 ];
 
 export default function ProfilePage() {
@@ -63,18 +52,9 @@ export default function ProfilePage() {
         </SideColumn>
         <MainContent>
           <SkillsGrid>
-            <Card>
-              <CardHeader>JS/TS</CardHeader>
-              <CardBody>Advanced JS development</CardBody>
-            </Card>
-            <Card>
-              <CardHeader>AWS</CardHeader>
-              <CardBody>Advanced cloud development</CardBody>
-            </Card>
-            <Card>
-              <CardHeader>Testing</CardHeader>
-              <CardBody>Knowledgeble Tester</CardBody>
-            </Card>
+            {skills.map(({ title, children }) => (
+              <Card title={title} children={children} />
+            ))}
           </SkillsGrid>
         </MainContent>
       </Wrapper>
