@@ -7,8 +7,9 @@ import Card from "../../components/card";
 import skillsItems from "./skills";
 
 const Wrapper = styled.div`
+  --top-gutter: 18px;
   display: flex;
-  padding-top: 18px;
+  padding-top: var(--top-gutter);
   position: relative;
 `;
 
@@ -42,7 +43,7 @@ const CardContent = styled.div`
 
 const ResetButton = styled(Minimize2)`
   position: absolute;
-  top: -18px;
+  top: calc(var(--top-gutter) * -1);
   right: 0;
   cursor: pointer;
 
