@@ -65,7 +65,7 @@ const roles = [
 export default function ProfilePage() {
   const initialCardState = new Array(skillsItems.length)
     .map((_, index) => index)
-    .reduce((acc, val) => ({ [val]: false }), {});
+    .reduce((acc, val) => ({ ...acc, [val]: false }), {});
   const [skillCardState, setSkillCardState] = useState(initialCardState);
 
   const reset = () => {

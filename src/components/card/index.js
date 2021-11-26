@@ -23,14 +23,14 @@ export default function Card({
 }
 
 const Wrapper = styled.div`
-  background-color: var(--color-background-light-dark);
+  background-color: var(--color-background-dark-15);
   border-radius: 8px;
   overflow: hidden;
   height: fit-content;
 `;
 
 const Header = styled.div`
-  background-color: var(--color-background-light-light-dark);
+  background-color: var(--color-background-dark-20);
   width: 100%;
   padding: 8px 16px;
   cursor: pointer;

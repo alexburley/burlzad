@@ -25,7 +25,7 @@ export default function NavigationBar() {
 const NavLinkStyled = styled(NavLink)`
   width: 50px;
   text-decoration: none;
-  color: var(--color-text-primary);
+  color: var(--color-contrast);
   font-size: 1.25rem;
 
   span:hover {
