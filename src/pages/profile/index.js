@@ -4,7 +4,8 @@ import { Minimize2 } from "react-feather";
 import Container from "../../components/container";
 import Timeline from "../../components/timeline";
 import Card from "../../components/card";
-import skillsItems from "./skills";
+import TextIcon from "../../components/text-icon";
+import skillsItems, { BACKEND, DEVOPS, FRONTEND, MANAGEMENT } from "./skills";
 
 const Wrapper = styled.div`
   --top-gutter: 18px;
@@ -51,6 +52,19 @@ const ResetButton = styled(Minimize2)`
     color: var(--color-secondary);
   }
 `;
+const StyledTextIcon = styled(TextIcon)`
+  background-color: ${(p) => `var(--color-accent-${p.backgroundColor})`};
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const TagWrapper = styled.div`
+  display: flex;
+  gap: 4px;
+`;
 
 const roles = [
   { date: new Date(2021, 10), label: "Senior Full Stack Engineer" },
@@ -62,6 +76,42 @@ const roles = [
   { date: new Date(2013, 9), label: "Student" },
 ];
 
+const getTitle = (tags, title) => {
+  const titleTags = tags.map((tag) => {
+    let backgroundColor;
+    let text;
+    if (tag === BACKEND) {
+      backgroundColor = "red";
+      text = "BE";
+    }
+    if (tag === FRONTEND) {
+      backgroundColor = "blue";
+      text = "FE";
+    }
+    if (tag === MANAGEMENT) {
+      backgroundColor = "yellow";
+      text = "MT";
+    }
+    if (tag === DEVOPS) {
+      backgroundColor = "green";
+      text = "OP";
+    }
+    return (
+      <StyledTextIcon
+        backgroundColor={backgroundColor}
+        size="25px"
+        text={text}
+      />
+    );
+  });
+  return (
+    <TitleWrapper>
+      {title}
+      <TagWrapper>{titleTags}</TagWrapper>
+    </TitleWrapper>
+  );
+};
+
 export default function ProfilePage() {
   const initialCardState = new Array(skillsItems.length)
     .map((_, index) => index)
@@ -71,10 +121,10 @@ export default function ProfilePage() {
   const reset = () => {
     setSkillCardState(initialCardState);
   };
-  const skills = skillsItems.map(({ children, title }, index) => {
+  const skills = skillsItems.map(({ children, title, tags }, index) => {
     return (
       <StyledCard
-        title={title}
+        title={getTitle(tags, title)}
         key={index}
         showingChildren={skillCardState[index]}
         setShowingChildren={() => {

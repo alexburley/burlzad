@@ -8,9 +8,10 @@ const Theme = createGlobalStyle`
     --color-contrast: white;
     --color-secondary: hsl(43, 96%, 56%);
 
-    --color-accent-blue: hsl(213, 94%, 68%);
-    --color-accent-red: hsl(0, 91%, 71%);
+    --color-accent-blue: #1D4ED8;
+    --color-accent-red:#B91C1C;
     --color-accent-yellow: hsl(43, 96%, 56%);
+    --color-accent-green: #047857;
   }
 
   body {
