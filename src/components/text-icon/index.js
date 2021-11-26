@@ -14,6 +14,7 @@ export default function TextIcon({ className, size, text, textColor }) {
 const Box = styled.div`
   height: ${(p) => p.size};
   width: ${(p) => p.size};
+  font-family: "Roboto Mono", monospace;
 `;
 
 const Text = styled.span`

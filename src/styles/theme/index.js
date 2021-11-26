@@ -17,6 +17,7 @@ const Theme = createGlobalStyle`
   body {
     background-color: var(--color-background-dark-10);
     color: var(--color-contrast);
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
     font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
