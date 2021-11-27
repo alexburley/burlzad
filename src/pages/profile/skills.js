@@ -1,3 +1,5 @@
+import React from "react";
+
 export const FRONTEND = "FE";
 export const BACKEND = "BE";
 export const MANAGEMENT = "MGMT";
@@ -6,87 +8,152 @@ export const DEVOPS = "OPS";
 export default [
   {
     title: "JS/TS",
-    children: "Expert JavaScript and TypeScript developer",
+    children: [
+      "Expert JavaScript and TypeScript developer",
+      "Extremely proficient in implementing ES6 patterns",
+      "Confident in diagnosing issues within NodeJS runtime",
+      "Knowledgable on NodeJS core libraries such as streams and http",
+    ],
     tags: [FRONTEND, BACKEND],
   },
   {
     title: "APIs",
-    children: "Confident taking a service from nothing to production",
+    children: [
+      "Passionate about building discoverable and well designed interfaces",
+      "Confident building pathways to production, leaning on multi stage testing",
+      "Experienced creating both REST and GraphQL apis and discussing tradeoffs with each",
+    ],
     tags: [BACKEND, DEVOPS, MANAGEMENT],
   },
   {
     title: "AWS",
-    children: "Multiple years working with AWS and evangelist for AWS CDK",
+    children: [
+      "Multiple years working with AWS and currently building with AWS CDK",
+      "Confident in managing AWS resources and security",
+      "Passionate about building event driven serverless software leveraging SNS, SQS and Lambda ",
+    ],
     tags: [DEVOPS, BACKEND],
   },
   {
     title: "Testing",
-    children:
+    children: [
       "Testing evangelist with broad experience across many areas of automated testing strategies",
+      "Experienced in extending Jest for increasing capability within teams",
+      `Built a testing library to implement an ease of use library for junior engineers at Tray.io.
+       Utilised familiar frameworks such as Nock and the Jest API and CLI to implemt 'connector-testing
+      `,
+    ],
     tags: [FRONTEND, BACKEND],
   },
   {
     title: "Serverless",
-    children:
+    children: [
       "Passionate about serverless technology and experienced using Serverless Framework and AWS CDK",
+      "Experienced in leading microservice development based on lambda",
+      "Knowledgable on managing serverless applications and common design patterns of this style",
+    ],
     tags: [DEVOPS, BACKEND],
   },
   {
-    title: "Java",
-    children:
-      "Experience using Micronaut and led delivery of a Java based printing service for Tesco Tills",
+    title: "JVM",
+    children: [
+      "Led delivery of a Java based printing service for Tesco Tills",
+      "Confident in using OOP design patterns",
+      "Completed course in FP fundamentals in Scala",
+    ],
     tags: [BACKEND],
   },
   {
     title: "React",
-    children:
-      "Confident in building React applications both natively and using NextJS",
+    children: [
+      "Experienced in building React applications",
+      "Confident using NextJS to provision React apps",
+      "Familiar with Atomic design and best practices for building components",
+    ],
     tags: [FRONTEND],
   },
   {
     title: "SQL",
-    children: "Working experience of PostgresSQL and common patterns",
+    children: [
+      "Experienced working with Postgresql",
+      "Implemented MySQL and Postgresql integrations at Tray.io",
+      "Contributed to the mysql open source node library",
+    ],
     tags: [BACKEND],
   },
   {
     title: "NoSQL",
-    children:
-      "Excited about DynamoDB and single table design. Working experience of MongoDB",
+    children: [
+      "Passionate about single table design using DynamoDB",
+      "Experienced in implementing data layers for NoSQL applications",
+      "Experienced in using MongoDB",
+    ],
     tags: [BACKEND],
   },
   {
     title: "HTML/CSS",
-    children:
-      "Good knowledge of semantic elements and I actually enjoy writing CSS",
+    children: [
+      "Great knowledge of CSS fundamentals and layouts",
+      "Completed JS in CSS course by Josh Comeaux",
+      "Passionate about accessibility and utilising semantic elements",
+    ],
     tags: [FRONTEND],
   },
   {
     title: "Agile",
-    children:
+    children: [
       "Interested in maximising value and minimising time to production through agile thought",
+      "Confident in exploiting agile methodology without introducing cumbersome processes",
+    ],
     tags: [MANAGEMENT],
   },
   {
     title: "Mentorship",
-    children: "Significant experience mentoring junior developers",
+    children: ["Significant experience mentoring junior developers"],
     tags: [MANAGEMENT],
   },
   {
     title: "Open Source",
-    children:
-      "Contributions to Open Source and happy finding myself in completely new projects",
+    children: [
+      "Happy contributing to completely new projects to enable team",
+      "Contributions to open source software e.g. mysql and needle NodeJS libararies",
+      "Strong proponent of teams maintaing their own set of open source libraries",
+    ],
     tags: [BACKEND],
   },
   {
     title: "DevOps",
-    children:
-      "Huge on CI/CD and using AWS Code Pipeline to accomplish that. Experienced with Jenkins",
+    children: [
+      "Huge on CI/CD and figuring out best practice for teams",
+      "Experienced using AWS CodePipeline and Jenkins",
+    ],
     tags: [DEVOPS],
   },
   {
     title: "Engineering",
-    children:
+    children: [
       "Proven experience in multiple languages using both OOP and FP design patterns",
+      "Strong Computer Science and analytical background",
+      "Experience with Haskell, Python, Java, Scala, JS, C#",
+    ],
     tags: [FRONTEND, BACKEND],
   },
-];
+  {
+    title: "Communication",
+    children: [
+      "Strong public speaker and presenter",
+      "Good writer and passionate about maintaining documentation",
+      "Genuine, honest and fair",
+    ],
+    tags: [MANAGEMENT],
+  },
+].map(({ children, ...rest }) => ({
+  ...rest,
+  children: (
+    <ul>
+      {children.map((c) => (
+        <li>{c}</li>
+      ))}
+    </ul>
+  ),
+}));
