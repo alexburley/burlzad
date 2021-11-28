@@ -12,21 +12,21 @@ export default [
     name: "burlzad.com",
     description:
       "This website is used to provide a professional profile and record the books I read.",
-    github: "https://github.com/alexburley/burlzad",
+    link: "https://github.com/alexburley/burlzad",
     tags: [FRONTEND],
   },
   {
     name: "whipsnap",
     description:
       "A rudimentary static site generator that I was going to use to provision a blog written in NodeJS.",
-    github: "https://github.com/alexburley/whipsnap",
+    link: "https://github.com/alexburley/whipsnap",
     tags: [FRONTEND],
   },
   {
     name: "auth-service",
     description:
       "A POC authorisation system I had some ideas for. I wanted to spike out the ideas to use day to day at work.",
-    github: "https://github.com/alexburley/auth-service",
+    link: "https://github.com/alexburley/auth-service",
     tags: [BACKEND],
   },
   {
@@ -37,9 +37,8 @@ export default [
     tags: [FRONTEND],
   },
   {
-    name: "Functional Programming Principles in Scala",
-    description:
-      "Introduction into FP concepts, currying, monads etc. Augmented by the 'Red Book': FP in Scala.",
+    name: "Functional Programming in Scala",
+    description: "Introduction into FP concepts, currying, monads etc.",
     link: "https://www.coursera.org/learn/scala-functional-programming",
     tags: [BACKEND],
   },

@@ -21,5 +21,6 @@ const Text = styled.span`
   line-height: ${(p) => p.size};
   font-weight: 700;
   padding: 4px;
+  font-size: 0.8rem;
   color: ${(p) => p.textColor || `var(--color-contrast)`};
 `;

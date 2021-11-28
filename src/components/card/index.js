@@ -37,7 +37,7 @@ const Header = styled.div`
   background-color: var(--color-background-dark-20);
   width: 100%;
   padding: 8px 16px;
-  cursor: ${(p) => (p.setShowingChildren ? "pointer" : undefined)};
+  cursor: ${(p) => (p.onClick ? "pointer" : undefined)};
 `;
 
 const Body = styled.div`

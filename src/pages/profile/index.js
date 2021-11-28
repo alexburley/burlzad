@@ -40,7 +40,12 @@ export default function ProfilePage() {
     ({ name, description, tags, link }, index) => {
       return (
         <ProjectCard
-          title={getTitle(tags, name)}
+          title={getTitle(
+            tags,
+            <TitleLink href={link} target="#blank">
+              {name}
+            </TitleLink>
+          )}
           key={index}
           showingChildren={true}
           children={<CardContent>{description}</CardContent>}
@@ -100,7 +105,7 @@ const ProjectsGrid = styled.div`
 `;
 
 const SkillCard = styled(Card)`
-  flex: 1 0 240px; ;
+  flex: 1 0 240px;
 `;
 
 const ProjectCard = styled(Card)`
@@ -127,6 +132,8 @@ const ResetButton = styled(Minimize2)`
 `;
 const StyledTextIcon = styled(TextIcon)`
   background-color: ${(p) => `var(--color-accent-${p.backgroundColor})`};
+  max-height: ${(p) => p.size};
+  max-width: ${(p) => p.size};
 `;
 
 const TitleWrapper = styled.div`
@@ -144,6 +151,14 @@ const SectionTitle = styled.h2`
   padding-left: 0px;
 `;
 
+const TitleLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+
+  :hover {
+    color: var(--color-secondary);
+  }
+`;
 const getTitle = (tags, title) => {
   const titleTags = tags.map((tag) => {
     let backgroundColor;
