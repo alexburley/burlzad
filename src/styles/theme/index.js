@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const Theme = createGlobalStyle`
-   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
   :root {
     --color-background-dark-10: hsl(0, 0%, 10%);

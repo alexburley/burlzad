@@ -151,8 +151,8 @@ export default [
   ...rest,
   children: (
     <ul>
-      {children.map((c) => (
-        <li>{c}</li>
+      {children.map((c, index) => (
+        <li key={index}>{c}</li>
       ))}
     </ul>
   ),

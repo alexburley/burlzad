@@ -165,7 +165,7 @@ const TitleLink = styled.a`
   }
 `;
 const getTitle = (tags, title) => {
-  const titleTags = tags.map((tag) => {
+  const titleTags = tags.map((tag, index) => {
     let backgroundColor;
     let text;
     if (tag === BACKEND) {
@@ -186,6 +186,7 @@ const getTitle = (tags, title) => {
     }
     return (
       <StyledTextIcon
+        key={index}
         backgroundColor={backgroundColor}
         size="25px"
         text={text}

@@ -18,12 +18,12 @@ export default function BooksGrid({ items }) {
     .reverse()
     .map((year, index) => {
       return (
-        <YearSectionWrapper>
+        <YearSectionWrapper key={index}>
           <YearHeading>{year}</YearHeading>
-          <BookGrid key={index}>
+          <BookGrid>
             {years[year].map(({ title, imgSrc, author }, index) => {
               return (
-                <BookItem>
+                <BookItem key={index}>
                   <BookImage alt={title} src={imgSrc}></BookImage>
                   <BookCaption>
                     <BookTitle>{title}</BookTitle>

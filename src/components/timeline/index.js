@@ -23,7 +23,7 @@ export default function Timeline({ items = [] }) {
         return (
           <Section key={index}>
             <Connector
-              end={!index}
+              end={!index ? 1 : 0}
               height={getConnectorHeight(date, previousDate)}
             />
             <Node>

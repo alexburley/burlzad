@@ -11,7 +11,7 @@ export default function NavigationBar() {
   ].map(([route, title]) => {
     return (
       <NavLinkStyled
-        active={location.pathname === route}
+        active={location.pathname === route ? 1 : 0}
         to={route}
         key={route}
       >
