@@ -11,9 +11,13 @@ export default function Card({
   return (
     <Wrapper className={className}>
       <Header
-        onClick={() => {
-          setShowingChildren(!showingChildren);
-        }}
+        onClick={
+          setShowingChildren
+            ? () => {
+                setShowingChildren(!showingChildren);
+              }
+            : undefined
+        }
       >
         {title}
       </Header>
@@ -33,7 +37,7 @@ const Header = styled.div`
   background-color: var(--color-background-dark-20);
   width: 100%;
   padding: 8px 16px;
-  cursor: pointer;
+  cursor: ${(p) => (p.setShowingChildren ? "pointer" : undefined)};
 `;
 
 const Body = styled.div`
