@@ -1,5 +1,19 @@
 export default [
   {
+    title: "Caliban's War",
+    yearRead: 2021,
+    author: "James S. A. Corey",
+    imgSrc:
+      "https://images-eu.ssl-images-amazon.com/images/I/51CW2rF7tyL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
+    title: "Functional Programming in Scala",
+    yearRead: 2020,
+    author: "Paul Chiusano",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/61sXJfXWscL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
     title: "Eye of the World",
     yearRead: 2018,
     author: "Robert Jordan",
@@ -140,7 +154,7 @@ export default [
   },
   {
     title: "Leviathan Wakes",
-    yearRead: 2019,
+    yearRead: 2020,
     author: "James S. A. Corey",
     imgSrc:
       "https://images-na.ssl-images-amazon.com/images/I/511RTVPcqaL._SX317_BO1,204,203,200_.jpg",
