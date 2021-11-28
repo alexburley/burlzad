@@ -113,10 +113,12 @@ const ProjectsGrid = styled.div`
 
 const SkillCard = styled(Card)`
   flex: 1 0 180px;
+  max-width: 360px;
 `;
 
 const ProjectCard = styled(Card)`
-  flex: 1 0 240px;
+  flex: 1 0 180px;
+  max-width: 360px;
 `;
 
 const CardContent = styled.div`
