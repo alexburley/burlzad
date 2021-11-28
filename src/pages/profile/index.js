@@ -61,8 +61,10 @@ export default function ProfilePage() {
           <Timeline items={roles} />
         </SideColumn>
         <MainContent>
-          <ResetButton onClick={reset} />
-          <SectionTitle>Skills</SectionTitle>
+          <MainContentHeader>
+            <SectionTitle>Skills</SectionTitle>
+            <ResetButton onClick={reset} />
+          </MainContentHeader>
           <SkillsGrid>{skills}</SkillsGrid>
           <SectionTitle>Projects</SectionTitle>
           <ProjectsGrid>{projects}</ProjectsGrid>
@@ -80,16 +82,21 @@ const Wrapper = styled.div`
 `;
 
 const SideColumn = styled.div`
-  flex: 0 0 280px;
-  min-width: 200px;
+  min-width: 50px;
   max-width: 35%;
   display: flex;
-  padding: 18px;
   padding-top: 0px;
 `;
 
 const MainContent = styled.div`
   flex: 1;
+  margin-left: 20px;
+`;
+
+const MainContentHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const SkillsGrid = styled.div`
@@ -105,7 +112,7 @@ const ProjectsGrid = styled.div`
 `;
 
 const SkillCard = styled(Card)`
-  flex: 1 0 240px;
+  flex: 1 0 180px;
 `;
 
 const ProjectCard = styled(Card)`
@@ -121,11 +128,7 @@ const CardContent = styled.div`
 `;
 
 const ResetButton = styled(Minimize2)`
-  position: absolute;
-  top: calc(var(--top-gutter) * -1);
-  right: 0;
   cursor: pointer;
-
   :hover {
     color: var(--color-secondary);
   }

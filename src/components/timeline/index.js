@@ -81,4 +81,8 @@ const NodeLabel = styled.span`
     font-size: 16px;
     line-height: 16px;
   }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
