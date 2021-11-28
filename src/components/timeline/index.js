@@ -82,7 +82,7 @@ const NodeLabel = styled.span`
     line-height: 16px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 370px) {
     display: none;
   }
 `;
