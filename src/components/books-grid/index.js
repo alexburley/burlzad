@@ -21,17 +21,27 @@ export default function BooksGrid({ items }) {
         <YearSectionWrapper key={index}>
           <YearHeading>{year}</YearHeading>
           <BookGrid>
-            {years[year].map(({ title, imgSrc, author }, index) => {
-              return (
-                <BookItem key={index}>
-                  <BookImage alt={title} src={imgSrc}></BookImage>
-                  <BookCaption>
-                    <BookTitle>{title}</BookTitle>
-                    <BookAuthor>{author}</BookAuthor>
-                  </BookCaption>
-                </BookItem>
-              );
-            })}
+            {years[year].map(
+              (
+                { title, imgSrc, author, reread, fiction, nonfiction },
+                index
+              ) => {
+                return (
+                  <BookItem key={index}>
+                    <BookImageWrapper>
+                      <BookImage alt={title} src={imgSrc}></BookImage>
+                      {reread && <ReReadBanner />}
+                      {fiction && <FictionBanner />}
+                      {nonfiction && <NonFictionBanner />}
+                    </BookImageWrapper>
+                    <BookCaption>
+                      <BookTitle>{title}</BookTitle>
+                      <BookAuthor>{author}</BookAuthor>
+                    </BookCaption>
+                  </BookItem>
+                );
+              }
+            )}
           </BookGrid>
         </YearSectionWrapper>
       );
@@ -64,6 +74,8 @@ const BookItem = styled.article`
   gap: 12px;
 `;
 
+const BookImageWrapper = styled.div``;
+
 const BookImage = styled.img`
   width: 100%;
   height: 150px;
@@ -81,4 +93,20 @@ const BookTitle = styled.span`
 const BookAuthor = styled.span`
   display: block;
   font-style: italic;
+`;
+
+const Banner = styled.div`
+  height: 4px;
+`;
+
+const ReReadBanner = styled(Banner)`
+  background-color: var(--color-accent-yellow);
+`;
+
+const FictionBanner = styled(Banner)`
+  background-color: var(--color-accent-green);
+`;
+
+const NonFictionBanner = styled(Banner)`
+  background-color: var(--color-accent-red);
 `;
