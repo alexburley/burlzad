@@ -1,4 +1,4 @@
-import { Code, GitHub, Linkedin, Twitter } from "react-feather";
+import { Code, GitHub, Linkedin, PenTool, Twitter } from "react-feather";
 import React from "react";
 import styled from "styled-components";
 import Container from "../../components/container";
@@ -15,6 +15,7 @@ export default function HomePage() {
             { Icon: Linkedin, url: "https://www.linkedin.com/in/alex-burley" },
             { Icon: Code, url: "https://www.npmjs.com/~burlzad" },
             { Icon: Twitter, url: "https://twitter.com/burlzad" },
+            { Icon: PenTool, url: "https://medium.com/@burlzad" },
           ].map(({ Icon, url }, index) => (
             <Link href={url} target="#blank" color="inherit" key={index}>
               <Icon
