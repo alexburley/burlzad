@@ -18,7 +18,7 @@ const getConnectorHeight = (current, previous) => {
 export default function Timeline({ items = [] }) {
   return (
     <Wrapper>
-      {items.map(({ date, label }, index) => {
+      {items.map(({ date, label, tooltip }, index) => {
         const { date: previousDate } = items[index - 1] || { date: new Date() };
         return (
           <Section key={index}>
@@ -27,7 +27,11 @@ export default function Timeline({ items = [] }) {
               height={getConnectorHeight(date, previousDate)}
             />
             <Node>
-              <NodeOrb tooltip={date} color={"hsla(52, 100%, 45%, 1)"} />
+              <NodeOrb tooltip={date} color={"hsla(52, 100%, 45%, 1)"}>
+                <NodeTooltipWrapper>
+                  <NodeTooltip>{tooltip}</NodeTooltip>
+                </NodeTooltipWrapper>
+              </NodeOrb>
               <NodeLabel>{label}</NodeLabel>
             </Node>
           </Section>
@@ -55,19 +59,6 @@ const Node = styled.div`
   display: flex;
 `;
 
-const NodeOrb = styled.div`
-  background-color: white;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  flex-shrink: 0;
-  margin-left: -5px;
-
-  :hover {
-    background-color: ${(p) => p.color};
-  }
-`;
-
 const NodeLabel = styled.span`
   height: 0px;
   align-self: start;
@@ -84,5 +75,42 @@ const NodeLabel = styled.span`
 
   @media (max-width: 370px) {
     display: none;
+  }
+`;
+
+const NodeTooltipWrapper = styled.div`
+  background-color: var(--color-background-dark-15);
+  position: absolute;
+  padding: 4px 8px;
+  left: 100%;
+  top: 150%;
+`;
+
+const NodeTooltip = styled.span`
+  visibility: inherit;
+  font-size: 12px;
+  color: var(--color-secondary);
+  text-align: center;
+  white-space: nowrap;
+`;
+
+const NodeOrb = styled.div`
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin-left: -5px;
+
+  :hover {
+    background-color: ${(p) => p.color};
+    ${NodeTooltipWrapper} {
+      visibility: inherit;
+    }
+  }
+
+  ${NodeTooltipWrapper} {
+    visibility: hidden;
   }
 `;
