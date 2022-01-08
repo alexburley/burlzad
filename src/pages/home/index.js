@@ -28,6 +28,7 @@ export default function HomePage() {
             </Link>
           ))}
         </IconsWrapper>
+        <Avatar src="/images/avatar.png" alt="Cartoon of Alex" />
       </BannerWrapper>
     </Container>
   );
@@ -35,15 +36,18 @@ export default function HomePage() {
 
 const BannerWrapper = styled.div`
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  @media (min-width: 600px) {
+    margin-top: 75px;
+  }
 `;
 const NameTitle = styled.h1`
   font-weight: bold;
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 100%;
 
-  @media (max-width: 600px) {
-    font-size: 5rem;
+  @media (min-width: 600px) {
+    font-size: 6rem;
   }
 `;
 const PositionTitle = styled.h2`
@@ -56,8 +60,12 @@ const PositionTitle = styled.h2`
 const IconsWrapper = styled.div`
   margin-top: 20px;
   display: flex;
-  gap: 18px;
+  gap: 9px;
   justify-content: center;
+  flex-wrap: wrap;
+  @media (min-width: 600px) {
+    gap: 18px;
+  }
 `;
 
 const Link = styled.a`
@@ -66,4 +74,10 @@ const Link = styled.a`
   :hover {
     color: var(--color-secondary);
   }
+`;
+
+const Avatar = styled.img`
+  margin: auto;
+  width: 240px;
+  margin-top: 25px;
 `;
