@@ -1,5 +1,13 @@
 export default [
   {
+    title: "A Poem for Every Feeling",
+    yearRead: 2022,
+    author: "An Anthology by Ella Risbridger",
+    fiction: true,
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/61FY5knjdML._SX388_BO1,204,203,200_.jpg",
+  },
+  {
     title: "The Lord of the Rings",
     yearRead: 2022,
     author: "JRR Tolkien",

@@ -6,8 +6,8 @@ import styled from "styled-components";
 
 export const LEGEND_INDICATOR_MAP = {
   reread: `var(--color-accent-yellow)`,
-  fiction: `var(--color-accent-red)`,
-  nonfiction: `var(--color-accent-green)`,
+  fiction: `var(--color-accent-green)`,
+  nonfiction: `var(--color-accent-red)`,
 };
 
 export default function BooksPage() {
