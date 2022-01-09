@@ -7,7 +7,9 @@ import Theme from "./styles/theme";
 import DarkModeSwitch from "./components/dark-mode-switch";
 
 export default function App() {
-  const [darkModeEnabled, setDarkModeEnabled] = useState(true);
+  const [darkModeEnabled, setDarkModeEnabled] = useState(
+    window.matchMedia("(prefers-color-scheme:dark)").matches
+  );
   return (
     <main>
       <ResetStyle />
