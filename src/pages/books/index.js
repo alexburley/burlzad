@@ -53,5 +53,6 @@ const Legend = styled.div`
   margin-left: 8px;
   top: 16px;
   left: 85%;
-  background-color: var(--color-background-dark-20);
+  background-color: var(--color-primary-contrast-high);
+  border-radius: 8px;
 `;

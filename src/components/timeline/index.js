@@ -27,7 +27,7 @@ export default function Timeline({ items = [] }) {
               height={getConnectorHeight(date, previousDate)}
             />
             <Node>
-              <NodeOrb tooltip={date} color={"hsla(52, 100%, 45%, 1)"}>
+              <NodeOrb tooltip={date}>
                 <NodeTooltipWrapper>
                   <NodeTooltip>{tooltip}</NodeTooltip>
                 </NodeTooltipWrapper>
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
 `;
 
 const Connector = styled.div`
-  background-color: white;
+  background-color: var(--color-contrast);
   width: 2px;
   height: ${({ height = 50 }) => `${height}px`};
   border-radius: ${(props) => (props.end ? "2px" : "0px")};
@@ -79,7 +79,7 @@ const NodeLabel = styled.span`
 `;
 
 const NodeTooltipWrapper = styled.div`
-  background-color: var(--color-background-dark-15);
+  background-color: var(--color-primary-contrast-low);
   position: absolute;
   padding: 4px 8px;
   left: 100%;
@@ -96,7 +96,7 @@ const NodeTooltip = styled.span`
 
 const NodeOrb = styled.div`
   position: relative;
-  background-color: white;
+  background-color: var(--color-contrast);
   border-radius: 50%;
   width: 12px;
   height: 12px;
@@ -104,7 +104,7 @@ const NodeOrb = styled.div`
   margin-left: -5px;
 
   :hover {
-    background-color: ${(p) => p.color};
+    background-color: var(--color-secondary);
     ${NodeTooltipWrapper} {
       visibility: inherit;
     }

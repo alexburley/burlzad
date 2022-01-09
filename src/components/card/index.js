@@ -27,14 +27,14 @@ export default function Card({
 }
 
 const Wrapper = styled.div`
-  background-color: var(--color-background-dark-15);
+  background-color: var(--color-primary-contrast-low);
   border-radius: 8px;
   overflow: hidden;
   height: fit-content;
 `;
 
 const Header = styled.div`
-  background-color: var(--color-background-dark-20);
+  background-color: var(--color-primary-contrast-high);
   width: 100%;
   padding: 8px 16px;
   cursor: ${(p) => (p.onClick ? "pointer" : undefined)};

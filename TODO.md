@@ -1,9 +1,1 @@
-- Feed served via API
-- Profile Page - Statement
-- Profile Page - skills
-- Profile Page - Projects: whipsnap, wedding, personal website
-- Filtering of books
-- Deploy script
-- Circle CI
-- Favicon
-- Upload book images to s3
+- https://dilshankelsen.com/make-styled-components-class-names-readable/
