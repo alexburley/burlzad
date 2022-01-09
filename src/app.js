@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ResetStyle from "./styles/reset-style";
 import Theme from "./styles/theme";
 import DarkModeSwitch from "./components/dark-mode-switch";
+import styled from "styled-components";
 
 export default function App() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(
@@ -14,10 +15,6 @@ export default function App() {
     <main>
       <ResetStyle />
       <Theme darkMode={darkModeEnabled} />
-      <DarkModeSwitch
-        darkModeEnabled={darkModeEnabled}
-        onClick={() => setDarkModeEnabled(!darkModeEnabled)}
-      />
       <Router>
         <NavigationBar />
         <Switch>
@@ -31,7 +28,17 @@ export default function App() {
             <HomePage />
           </Route>
         </Switch>
+        <Spacer />
+        <DarkModeSwitch
+          darkModeEnabled={darkModeEnabled}
+          onClick={() => setDarkModeEnabled(!darkModeEnabled)}
+        />
       </Router>
     </main>
   );
 }
+
+const Spacer = styled.div`
+  height: 60px;
+  width: 100%;
+`;

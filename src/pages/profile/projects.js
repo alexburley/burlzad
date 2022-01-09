@@ -30,6 +30,13 @@ export default [
     tags: [BACKEND],
   },
   {
+    name: "axios-client-builder",
+    description:
+      "NPM package to add some utilities to an axios client and standarizing patterns across services",
+    link: "https://github.com/alexburley/axios-client-builder",
+    tags: [BACKEND, FRONTEND],
+  },
+  {
     name: "JS for CSS",
     description:
       "Learning JS for CSS from Josh Comeaux, now I like writing CSS.",

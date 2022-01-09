@@ -7,7 +7,7 @@ export default function DarkModeSwitch({ onClick, darkModeEnabled }) {
     width: 40,
     height: 40,
     margin: 0,
-    color: "var(--color-contrast)",
+    color: "inherit",
   };
   return (
     <IconWrapper as={"div"} onClick={onClick}>
@@ -26,4 +26,8 @@ const IconWrapper = styled.div`
   bottom: 0;
   right: 0;
   margin: 8px;
+  color: var(--color-contrast);
+  :hover {
+    color: var(--color-secondary);
+  }
 `;
