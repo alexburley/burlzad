@@ -10,13 +10,13 @@ export default function DarkModeSwitch({ onClick, darkModeEnabled }) {
     color: "inherit",
   };
   return (
-    <IconWrapper as={"div"} onClick={onClick}>
+    <IconWrapper href="#" aria-label="Dark Mode Switch" onClick={onClick}>
       {darkModeEnabled ? <Sun style={style} /> : <Moon style={style} />}
     </IconWrapper>
   );
 }
 
-const IconWrapper = styled.div`
+const IconWrapper = styled.a`
   background-color: var(--color-background-contrast);
   cursor: pointer;
   height: 50px;
