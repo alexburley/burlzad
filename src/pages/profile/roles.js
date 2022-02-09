@@ -1,5 +1,10 @@
 export default [
   {
+    date: new Date(2022, 2),
+    label: "Senior Software Engineer",
+    tooltip: "Cazoo",
+  },
+  {
     date: new Date(2021, 10),
     label: "Senior Full Stack Engineer",
     tooltip: "Reach PLC",
