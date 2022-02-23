@@ -1,5 +1,13 @@
 export default [
   {
+    title:
+      "Accelerate: Building and Scaling High Performing Technology Organizations",
+    yearRead: 2022,
+    author: "Nicole Forsgren, Jez Humble, Nicole Forsgren",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/51CjXuVck+L.jpg",
+  },
+  {
     title: "On Fire",
     yearRead: 2022,
     author: "Ben Stokes",

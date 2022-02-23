@@ -1,6 +1,6 @@
 # Personal Website
 
-Hosted via s3 bucket and deployed via CircleCI
+Hosted with Vercel.
 
 Uses styled components and React
 
