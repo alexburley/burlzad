@@ -11,7 +11,7 @@ export default [
     title: "On Fire",
     yearRead: 2022,
     author: "Ben Stokes",
-    fiction: false,
+    nonfiction: true,
     imgSrc:
       "https://images-eu.ssl-images-amazon.com/images/I/41Cc43F6GYL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
   },
