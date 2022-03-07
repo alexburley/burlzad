@@ -1,11 +1,26 @@
 export default [
   {
-    title:
-      "Accelerate: Building and Scaling High Performing Technology Organizations",
+    title: "A History of the World in Twelve Maps",
     yearRead: 2022,
-    author: "Nicole Forsgren, Jez Humble, Nicole Forsgren",
+    author: "Jerry Brotton",
+    nonfiction: true,
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/51eL65Bbo+L._SY344_BO1,204,203,200_.jpg",
+  },
+  {
+    title: "Accelerate",
+    yearRead: 2022,
+    author: "Nicole Forsgren, Jez Humble, Nicole Forsgren, Gene Kim",
     nonfiction: true,
     imgSrc: "https://m.media-amazon.com/images/I/51CjXuVck+L.jpg",
+  },
+  {
+    title: "Dune",
+    yearRead: 2022,
+    author: "Frank Herbert",
+    fiction: true,
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/41rxoi1jMQL._SX331_BO1,204,203,200_.jpg",
   },
   {
     title: "On Fire",
