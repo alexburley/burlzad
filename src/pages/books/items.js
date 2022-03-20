@@ -1,5 +1,29 @@
 export default [
   {
+    title: "User Story Mapping",
+    yearRead: 2022,
+    author: "Jeff Patton",
+    nonfiction: true,
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/51OBhcSAfAL._SX331_BO1,204,203,200_.jpg",
+  },
+  {
+    title: "The First Kingdom",
+    yearRead: 2022,
+    author: "Max Adams",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/914P2GRooOL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "Wealth of Nations",
+    yearRead: 2022,
+    author: "Adam Smith",
+    nonfiction: true,
+    imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/51XJWydjooL._SX317_BO1,204,203,200_.jpg",
+  },
+  {
     title: "A History of the World in Twelve Maps",
     yearRead: 2022,
     author: "Jerry Brotton",
