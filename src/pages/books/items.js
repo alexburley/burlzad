@@ -1,5 +1,20 @@
 export default [
   {
+    title: "INSPIRED",
+    yearRead: 2022,
+    author: "Marty Cagan",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/41lhsQn6ZdL._SY346_.jpg",
+  },
+  {
+    title: "Lean from the Trenches",
+    yearRead: 2022,
+    author: "Henrik Kniberg",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/P/1934356859.01._SCLZZZZZZZ_SX500_.jpg",
+  },
+  {
     title: "User Story Mapping",
     yearRead: 2022,
     author: "Jeff Patton",
