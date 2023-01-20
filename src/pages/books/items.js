@@ -1,5 +1,45 @@
 export default [
   {
+    title: "The Making of a Manager",
+    yearRead: 2023,
+    author: "Julie Zhuo",
+    nonfiction: true,
+    imgSrc:
+      "http://books.google.com/books/content?id=SPNLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  },
+  {
+    title: "The Motorcycle Diaries",
+    yearRead: 2023,
+    author: "Che Guvera",
+    nonfiction: true,
+    imgSrc:
+      "http://books.google.com/books/content?id=1zYGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  },
+  {
+    title: "Atomic Habits",
+    yearRead: 2023,
+    author: "James Clear",
+    nonfiction: true,
+    imgSrc:
+      "http://books.google.com/books/content?id=fFCjDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  },
+  {
+    title: "Radical Candor",
+    yearRead: 2023,
+    author: "Kim Scott",
+    nonfiction: true,
+    imgSrc:
+      "http://books.google.com/books/content?id=zbYDDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  },
+  {
+    title: "On Writing",
+    yearRead: 2023,
+    author: "Stephen King",
+    nonfiction: true,
+    imgSrc:
+      "http://books.google.com/books/content?id=d999Z2KbZJYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+  },
+  {
     title: "INSPIRED",
     yearRead: 2022,
     author: "Marty Cagan",
