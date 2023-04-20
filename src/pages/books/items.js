@@ -1,5 +1,21 @@
 export default [
   {
+    title: "Memories of Ice",
+    yearRead: 2023,
+    author: "Steven Erikson",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/P/0553813129.01._SCLZZZZZZZ_SX500_.jpg",
+  },
+  {
+    title: "Bad Feminist",
+    yearRead: 2023,
+    author: "Roxane Gay",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/P/B00M0T03EC.01._SCLZZZZZZZ_SX500_.jpg",
+  },
+  {
     title: "The Making of a Manager",
     yearRead: 2023,
     author: "Julie Zhuo",
