@@ -1,11 +1,35 @@
 export default [
   {
+    title: "Midnight Tides",
+    yearRead: 2023,
+    author: "Steven Erikson",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/P/0553813145.01._SCLZZZZZZZ_SX500_.jpg",
+  },
+  {
+    title: "House of Chains",
+    yearRead: 2023,
+    author: "Steven Erikson",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/P/0553813137.01._SCLZZZZZZZ_SX500_.jpg",
+  },
+  {
     title: "Memories of Ice",
     yearRead: 2023,
     author: "Steven Erikson",
     fiction: true,
     imgSrc:
       "https://m.media-amazon.com/images/P/0553813129.01._SCLZZZZZZZ_SX500_.jpg",
+  },
+  {
+    title: "Deadhouse Gates",
+    yearRead: 2022,
+    author: "Steven Erikson",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/P/0553813110.01._SCLZZZZZZZ_SX500_.jpg",
   },
   {
     title: "Bad Feminist",
