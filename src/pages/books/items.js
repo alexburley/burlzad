@@ -1,5 +1,12 @@
 export default [
   {
+    title: "Domain Driven Design",
+    yearRead: 2023,
+    author: "Eric Evans",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/51OWGtzQLLL._SX260_.jpg",
+  },
+  {
     title: "Midnight Tides",
     yearRead: 2023,
     author: "Steven Erikson",
