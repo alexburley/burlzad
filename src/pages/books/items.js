@@ -1,5 +1,37 @@
 export default [
   {
+    title: "The Bonehunters",
+    yearRead: 2024,
+    author: "Steven Erikson",
+    nonfiction: false,
+    fiction: true,
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/en/c/cf/The_Bonehunters_1st_ed.jpg",
+  },
+  {
+    title: "Release it!",
+    yearRead: 2024,
+    author: "Michael T. Nygard",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/51YLCdLeopS._SL1000_.jpg",
+  },
+  {
+    title: "The Lord of the Rings - The Two Towers Audiobook",
+    yearRead: 2024,
+    author: "JRR Tolkien / Andy Serkis",
+    nonfiction: false,
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/61YMnN7VzmL._SL500_.jpg",
+  },
+  {
+    title: "The Lord of the Rings - Fellowship of the Ring Audiobook",
+    yearRead: 2023,
+    author: "JRR Tolkien / Andy Serkis",
+    nonfiction: false,
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/61irmlqdpWL._SL500_.jpg",
+  },
+  {
     title: "Domain Driven Design",
     yearRead: 2023,
     author: "Eric Evans",
