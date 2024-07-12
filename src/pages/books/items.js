@@ -1,5 +1,13 @@
 export default [
   {
+    title: "Pride & Prejudice",
+    yearRead: 2024,
+    author: "Jane Austen",
+    nonfiction: false,
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81NLDvyAHrL._SL1500_.jpg",
+  },
+  {
     title: "Meditations",
     yearRead: 2024,
     author: "Marcus Aurelius",
