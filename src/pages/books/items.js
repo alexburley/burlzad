@@ -1,5 +1,46 @@
 export default [
   {
+    title: "The Go Programming Language",
+    yearRead: 2024,
+    author: "Alan A. A. Donovan, Brian W. Kernighan",
+    nonfiction: true,
+    fiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/61GNpAHFttL._SL1281_.jpg",
+  },
+  {
+    title: "Agile Technical Practices Distilled",
+    yearRead: 2024,
+    author: "Pedro Santos, Marco Consolaro, Alessandro Di Gioia",
+    nonfiction: true,
+    fiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/61jBOEkmpXL._SL1360_.jpg",
+  },
+  {
+    title: "Letters from a Stoic",
+    yearRead: 2024,
+    author: "Seneca",
+    nonfiction: true,
+    fiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/61EVmWoiuaL._SL1200_.jpg",
+  },
+
+  {
+    title: "Sunbringer",
+    yearRead: 2024,
+    author: "Hannah Kaner",
+    nonfiction: false,
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91GplDaThSL._SL1500_.jpg",
+  },
+  {
+    title: "Politics on the Edge",
+    yearRead: 2024,
+    author: "Rory Stewart",
+    nonfiction: true,
+    fiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/81w+hBKx-VL._SL1500_.jpg",
+  },
+  {
     title: "Pride & Prejudice",
     yearRead: 2024,
     author: "Jane Austen",
