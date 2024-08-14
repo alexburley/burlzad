@@ -7,16 +7,19 @@ import Card from "../../components/card";
 import TextIcon from "../../components/text-icon";
 import skillsItems, { BACKEND, DEVOPS, FRONTEND, MANAGEMENT } from "./skills";
 import roles from "./roles";
-import projectsItems from "./projects";
+// import projectsItems from "./projects";
 
 export default function ProfilePage() {
   const initialCardState = new Array(skillsItems.length)
     .map((_, index) => index)
     .reduce((acc, val) => ({ ...acc, [val]: false }), {});
+
   const [skillCardState, setSkillCardState] = useState(initialCardState);
+  const [roleCardState, setRoleCardState] = useState(initialCardState);
 
   const reset = () => {
     setSkillCardState(initialCardState);
+    setRoleCardState(initialCardState);
   };
 
   const skills = skillsItems.map(({ children, title, tags }, index) => {
@@ -36,23 +39,59 @@ export default function ProfilePage() {
     );
   });
 
-  const projects = projectsItems.map(
-    ({ name, description, tags, link }, index) => {
+  const rolesToDisplay = roles.reduce((acc, role) => {
+    const replacement = acc[role.tooltip] || {};
+    return {
+      ...acc,
+      [role.tooltip]: {
+        ...replacement,
+        tooltip: role.tooltip,
+        description: replacement.description || role.description,
+        date: replacement.date || role.date,
+      },
+    };
+  }, {});
+
+  const work = Object.values(rolesToDisplay).map(
+    ({ description, tooltip, date }, index) => {
       return (
-        <ProjectCard
-          title={getTitle(
-            tags,
-            <TitleLink href={link} target="#blank">
-              {name}
-            </TitleLink>
-          )}
+        <SkillCard
+          title={tooltip}
           key={index}
-          showingChildren={true}
-          children={<CardContent>{description}</CardContent>}
+          showingChildren={roleCardState[index]}
+          setShowingChildren={() => {
+            setRoleCardState({
+              ...roleCardState,
+              [index]: !roleCardState[index],
+            });
+          }}
+          children={
+            <CardContent>
+              <p>{description}</p>
+            </CardContent>
+          }
         />
       );
     }
   );
+
+  // const projects = projectsItems.map(
+  //   ({ name, description, tags, link }, index) => {
+  //     return (
+  //       <ProjectCard
+  //         title={getTitle(
+  //           tags,
+  //           <TitleLink href={link} target="#blank">
+  //             {name}
+  //           </TitleLink>
+  //         )}
+  //         key={index}
+  //         showingChildren={true}
+  //         children={<CardContent>{description}</CardContent>}
+  //       />
+  //     );
+  //   }
+  // );
 
   return (
     <Container>
@@ -66,8 +105,8 @@ export default function ProfilePage() {
             <ResetButton onClick={reset} />
           </MainContentHeader>
           <SkillsGrid>{skills}</SkillsGrid>
-          <SectionTitle>Projects</SectionTitle>
-          <ProjectsGrid>{projects}</ProjectsGrid>
+          <SectionTitle>Roles</SectionTitle>
+          <ProjectsGrid>{work}</ProjectsGrid>
         </MainContent>
       </Wrapper>
     </Container>
