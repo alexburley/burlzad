@@ -39,24 +39,38 @@ export default function ProfilePage() {
     );
   });
 
-  const rolesToDisplay = roles.reduce((acc, role) => {
-    const replacement = acc[role.tooltip] || {};
-    return {
-      ...acc,
-      [role.tooltip]: {
-        ...replacement,
-        tooltip: role.tooltip,
-        description: replacement.description || role.description,
-        date: replacement.date || role.date,
-      },
-    };
-  }, {});
+  const rolesToDisplay = Object.values(
+    roles.reduce((acc, role) => {
+      const replacement = acc[role.tooltip] || {};
+      return {
+        ...acc,
+        [role.tooltip]: {
+          ...replacement,
+          tooltip: role.tooltip,
+          description: replacement.description || role.description,
+          date: replacement.date || role.date,
+          tenure: replacement.tenure || role.tenure,
+        },
+      };
+    }, {})
+  );
 
-  const work = Object.values(rolesToDisplay).map(
-    ({ description, tooltip, date }, index) => {
+  const work = rolesToDisplay.map(
+    ({ description, tooltip, date, tenure }, index) => {
       return (
-        <SkillCard
-          title={tooltip}
+        <RoleCard
+          title={
+            <div>
+              <h3>
+                {tooltip} -{" "}
+                {date.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                })}
+              </h3>
+              <h4>{tenure}</h4>
+            </div>
+          }
           key={index}
           showingChildren={roleCardState[index]}
           setShowingChildren={() => {
@@ -67,7 +81,7 @@ export default function ProfilePage() {
           }}
           children={
             <CardContent>
-              <p>{description}</p>
+              <div dangerouslySetInnerHTML={{ __html: description }}></div>
             </CardContent>
           }
         />
@@ -153,6 +167,19 @@ const ProjectsGrid = styled.div`
 const SkillCard = styled(Card)`
   flex: 1 0 180px;
   max-width: 360px;
+`;
+
+const RoleCard = styled(SkillCard)`
+  min-width: 280px;
+  p {
+    padding: 4px 8px;
+  }
+  :hover {
+    h3,
+    h4 {
+      color: var(--color-secondary);
+    }
+  }
 `;
 
 const ProjectCard = styled(Card)`
