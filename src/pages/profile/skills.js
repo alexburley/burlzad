@@ -20,7 +20,7 @@ export default [
     title: "APIs",
     children: [
       "Passionate about building discoverable and well designed interfaces",
-      "Confident building pathways to production, leaning on multi stage testing",
+      "Deep knowledge of building middleware and API gateways",
       "Experienced creating both REST and GraphQL apis and discussing tradeoffs with each",
     ],
     tags: [BACKEND, DEVOPS, MANAGEMENT],
@@ -28,7 +28,7 @@ export default [
   {
     title: "AWS",
     children: [
-      "Multiple years working with AWS and currently building with AWS CDK",
+      "Multiple years working with AWS building with AWS CDK, Cloudformation and Serverless Framework",
       "Confident in managing AWS resources and security",
       "Passionate about building event driven serverless software leveraging SNS, SQS and Lambda ",
     ],
@@ -39,9 +39,7 @@ export default [
     children: [
       "Testing evangelist with broad experience across many areas of automated testing strategies",
       "Experienced in extending Jest for increasing capability within teams",
-      `Built a testing library to implement an ease of use library for junior engineers at Tray.io.
-       Utilised familiar frameworks such as Nock and the Jest API and CLI to implemt 'connector-testing
-      `,
+      `Built a testing library to implement an ease of use library for junior engineers at Tray.io`,
     ],
     tags: [FRONTEND, BACKEND],
   },
@@ -109,7 +107,11 @@ export default [
   },
   {
     title: "Mentorship",
-    children: ["Significant experience mentoring junior developers"],
+    children: [
+      "Significant experience mentoring junior developers",
+      "Line manager for senior engineers at Bloom",
+      "Became a technical leader within multiple teams",
+    ],
     tags: [MANAGEMENT],
   },
   {
@@ -125,7 +127,7 @@ export default [
     title: "DevOps",
     children: [
       "Huge on CI/CD and figuring out best practice for teams",
-      "Experienced using AWS CodePipeline and Jenkins",
+      "Experienced using AWS CodePipeline, Jenkins, Github Actions",
     ],
     tags: [DEVOPS],
   },
