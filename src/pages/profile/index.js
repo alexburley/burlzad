@@ -7,7 +7,7 @@ import Card from "../../components/card";
 import TextIcon from "../../components/text-icon";
 import skillsItems, { BACKEND, DEVOPS, FRONTEND, MANAGEMENT } from "./skills";
 import roles from "./roles";
-// import projectsItems from "./projects";
+import projectsItems from "./projects";
 
 export default function ProfilePage() {
   const initialCardState = new Array(skillsItems.length)
@@ -89,23 +89,23 @@ export default function ProfilePage() {
     }
   );
 
-  // const projects = projectsItems.map(
-  //   ({ name, description, tags, link }, index) => {
-  //     return (
-  //       <ProjectCard
-  //         title={getTitle(
-  //           tags,
-  //           <TitleLink href={link} target="#blank">
-  //             {name}
-  //           </TitleLink>
-  //         )}
-  //         key={index}
-  //         showingChildren={true}
-  //         children={<CardContent>{description}</CardContent>}
-  //       />
-  //     );
-  //   }
-  // );
+  const projects = projectsItems.map(
+    ({ name, description, tags, link }, index) => {
+      return (
+        <ProjectCard
+          title={getTitle(
+            tags,
+            <TitleLink href={link} target="#blank">
+              {name}
+            </TitleLink>
+          )}
+          key={index}
+          showingChildren={true}
+          children={<CardContent>{description}</CardContent>}
+        />
+      );
+    }
+  );
 
   return (
     <Container>
@@ -121,6 +121,8 @@ export default function ProfilePage() {
           <SkillsGrid>{skills}</SkillsGrid>
           <SectionTitle>Roles</SectionTitle>
           <ProjectsGrid>{work}</ProjectsGrid>
+          <SectionTitle>Projects</SectionTitle>
+          <ProjectsGrid>{projects}</ProjectsGrid>
         </MainContent>
       </Wrapper>
     </Container>
