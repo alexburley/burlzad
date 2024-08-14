@@ -106,6 +106,14 @@ export default [
       "https://upload.wikimedia.org/wikipedia/en/c/cf/The_Bonehunters_1st_ed.jpg",
   },
   {
+    title: "Continuous Delivery",
+    yearRead: 2024,
+    author: "Jez Humble, Dave Farley",
+    nonfiction: true,
+    fiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/71sYKaNItcL._SL1500_.jpg",
+  },
+  {
     title: "Release it!",
     yearRead: 2024,
     author: "Michael T. Nygard",
