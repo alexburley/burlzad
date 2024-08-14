@@ -210,6 +210,9 @@ const StyledTextIcon = styled(TextIcon)`
 const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  :hover {
+    color: var(--color-secondary);
+  }
 `;
 
 const TagWrapper = styled.div`
