@@ -8,14 +8,14 @@ export default function HomePage() {
     <Container>
       <BannerWrapper>
         <NameTitle>Alex Burley</NameTitle>
-        <PositionTitle>Senior Software Engineer</PositionTitle>
+        <PositionTitle>Principal Software Engineer</PositionTitle>
         <IconsWrapper>
           {[
             { Icon: GitHub, url: "https://github.com/alexburley" },
             { Icon: Linkedin, url: "https://www.linkedin.com/in/alex-burley" },
-            { Icon: Code, url: "https://www.npmjs.com/~burlzad" },
-            { Icon: Twitter, url: "https://twitter.com/burlzad" },
+            // { Icon: Twitter, url: "https://twitter.com/burlzad" },
             { Icon: PenTool, url: "https://medium.com/@burlzad" },
+            { Icon: Code, url: "https://www.npmjs.com/~burlzad" },
           ].map(({ Icon, url }, index) => (
             <Link href={url} target="#blank" color="inherit" key={index}>
               <Icon
