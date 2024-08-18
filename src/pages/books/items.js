@@ -1,5 +1,21 @@
 export default [
   {
+    title: "Wuthering Heights",
+    yearRead: 2024,
+    author: "Emily Bronte",
+    nonfiction: false,
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81T34Sem-tL._SL1500_.jpg",
+  },
+  {
+    title: "The Morell Compass",
+    yearRead: 2024,
+    author: "Connor Melvin",
+    nonfiction: false,
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/719sviuLJXL._SL1500_.jpg",
+  },
+  {
     title: "The Go Programming Language",
     yearRead: 2024,
     author: "Alan A. A. Donovan, Brian W. Kernighan",
