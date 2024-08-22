@@ -14,7 +14,7 @@ export default function HomePage() {
             { Icon: GitHub, url: "https://github.com/alexburley" },
             { Icon: Linkedin, url: "https://www.linkedin.com/in/alex-burley" },
             // { Icon: Twitter, url: "https://twitter.com/burlzad" },
-            { Icon: PenTool, url: "https://medium.com/@burlzad" },
+            { Icon: PenTool, url: "https://blog.burlzad.com" },
             { Icon: Code, url: "https://www.npmjs.com/~burlzad" },
           ].map(({ Icon, url }, index) => (
             <Link href={url} target="#blank" color="inherit" key={index}>
