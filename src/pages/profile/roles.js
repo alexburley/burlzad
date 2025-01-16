@@ -1,10 +1,10 @@
 export default [
   {
     date: new Date(2024, 9),
-    label: "Principle Engineer",
+    label: "Principal Engineer",
     tooltip: "Atom Bank",
     tenure: "Current",
-    description: `<p><b>Principle Engineer (Go) </b></p>
+    description: `<p><b>Principal Engineer (Go) </b></p>
 
 <p>Working in the Mortgages value stream</p>
 `,
