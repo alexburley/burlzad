@@ -1,5 +1,19 @@
 export default [
   {
+    title: "Flow Architectures",
+    yearRead: 2025,
+    author: "James Urquhart",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91hDhctbAIL._SL1500_.jpg",
+  },
+  {
+    title: "1984",
+    yearRead: 2025,
+    author: "George Orwell",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/612ADI+BVlL._SL1500_.jpg",
+  },
+  {
     title: "Learning Systems Thinking",
     yearRead: 2025,
     author: "Diana Montalion",
