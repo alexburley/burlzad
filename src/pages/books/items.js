@@ -1,5 +1,12 @@
 export default [
   {
+    title: "Property Investing All-in-One For Dummies",
+    yearRead: 2025,
+    author: "Melanie Bien",
+    nonfiction: true,
+    imgSrc: "https://i.ebayimg.com/images/g/g1gAAOSwjRFbZCqH/s-l500.webp",
+  },
+  {
     title: "Flow Architectures",
     yearRead: 2025,
     author: "James Urquhart",
@@ -114,7 +121,7 @@ export default [
 
   {
     title: "Sunbringer",
-    yearRead: 2024,
+    yearRead: 2025,
     author: "Hannah Kaner",
     nonfiction: false,
     fiction: true,
