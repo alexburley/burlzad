@@ -1,5 +1,67 @@
 export default [
   {
+    title: "Discourses of Epictetus",
+    yearRead: 2025,
+    author: "Arian, Epictetus",
+    nonfiction: true,
+    imgSrc:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.rB0EoYA3gnRYcHzcUpA2hgAAAA%3Fpid%3DApi&f=1&ipt=f1507b1076b3fc331f9c7bc54334abf9b26d17b47cf632f0c4a26aed32179b67&ipo=images",
+  },
+  {
+    title: "Bushido",
+    yearRead: 2025,
+    author: "Inazo Nitobe",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/41jVE7LJj-L._SY445_SX342_.jpg",
+  },
+  {
+    title: "The Communist Manifesto",
+    yearRead: 2025,
+    author: "Karl Marx",
+    nonfiction: true,
+    imgSrc:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd28hgpri8am2if.cloudfront.net%2Fbook_images%2Fcvr9780671678814_9780671678814_hr.jpg&f=1&nofb=1&ipt=f5aa955e5bbf7292dcde3e04f390fd94540195adb4aecb95c476ff3ce9404fd8",
+  },
+  {
+    title: "The Metamorphosis",
+    yearRead: 2025,
+    author: "Franz Kafka",
+    nonfiction: false,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/61UhkxbqNPL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "The Great Gatsby",
+    yearRead: 2025,
+    author: "F. Scott Fitzgerald",
+    nonfiction: false,
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/1024px-The_Great_Gatsby_Cover_1925_Retouched.jpg",
+  },
+  {
+    title: "Thinking in Systems",
+    yearRead: 2025,
+    author: "Donella H. Meadows",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/810yZQefYzL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "Learning Systems Thinking",
+    yearRead: 2025,
+    author: "Diana Montalion",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/812xw53x2iL._SL1500_.jpg",
+  },
+  {
+    title: "A Wizard of Earthsea",
+    yearRead: 2025,
+    author: "Ursula K. Le Guin",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51iQfxB5rHL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
     title: "Property Investing All-in-One For Dummies",
     yearRead: 2025,
     author: "Melanie Bien",
