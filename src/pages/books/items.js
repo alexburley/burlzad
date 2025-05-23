@@ -63,13 +63,6 @@ export default [
       "https://m.media-amazon.com/images/I/810yZQefYzL._AC_UY436_FMwebp_QL65_.jpg",
   },
   {
-    title: "Learning Systems Thinking",
-    yearRead: 2025,
-    author: "Diana Montalion",
-    nonfiction: true,
-    imgSrc: "https://m.media-amazon.com/images/I/812xw53x2iL._SL1500_.jpg",
-  },
-  {
     title: "A Wizard of Earthsea",
     yearRead: 2025,
     author: "Ursula K. Le Guin",
