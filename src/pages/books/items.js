@@ -1,5 +1,21 @@
 export default [
   {
+    title: "The Prince",
+    yearRead: 2025,
+    author: "Niccolò Machiavelli",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/61vlYoG0PiL._SL1441_.jpg",
+  },
+  {
+    title: "Book of the Five Rings",
+    yearRead: 2025,
+    author: "Miyamoto Musashi",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/91sjH8fevmL._SL1500_.jpg",
+  },
+  {
     title: "Discourses of Epictetus",
     yearRead: 2025,
     author: "Arian, Epictetus",
@@ -58,6 +74,7 @@ export default [
     yearRead: 2025,
     author: "Ursula K. Le Guin",
     nonfiction: true,
+    reread: true,
     imgSrc:
       "https://m.media-amazon.com/images/I/51iQfxB5rHL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
   },
