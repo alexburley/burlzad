@@ -1,5 +1,72 @@
 export default [
   {
+    title:
+      "Stoicism: How to use Stoic Philosophy to Find Inner Peace and Happiness",
+    yearRead: 2025,
+    author: "Jason Hemlock",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71WLPsHQzWS._SL1500_.jpg",
+  },
+  {
+    title: "How to Talk to Anyone",
+    yearRead: 2025,
+    author: "Leil Lowndes",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/61tfAdvkYqL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "Animal Farm",
+    yearRead: 2025,
+    author: "George Orwell",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/91Lbhwt5RzL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "The Jungle Book",
+    yearRead: 2025,
+    author: "Rudyard Kipling",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71tZFyA-z7L._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "The Importance of Being Earnest",
+    yearRead: 2025,
+    author: "Oscar Wilde",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/51o1fvmNKuL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    title: "Tehanu",
+    yearRead: 2025,
+    author: "Ursula K. Le Guin",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/A1cDdP9fv1L._SY522_.jpg",
+  },
+  {
+    title: "The Farthest Shore",
+    yearRead: 2025,
+    author: "Ursula K. Le Guin",
+    fiction: true,
+    reread: true,
+    imgSrc:
+      "https://images-eu.ssl-images-amazon.com/images/I/41TUQacykuL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
+    title: "Tombs of Atuan",
+    yearRead: 2025,
+    author: "Ursula K. Le Guin",
+    fiction: true,
+    reread: true,
+    imgSrc:
+      "https://images-eu.ssl-images-amazon.com/images/I/51tLvYdbRcL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+  },
+  {
     title: "The Prince",
     yearRead: 2025,
     author: "Niccolò Machiavelli",
