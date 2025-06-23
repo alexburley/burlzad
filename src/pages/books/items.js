@@ -1,5 +1,13 @@
 export default [
   {
+    title: "Fahrenheit 451",
+    yearRead: 2025,
+    author: "Ray Bradbury",
+    nonfiction: false,
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg",
+  },
+  {
     title: "Strange Case of Dr Jekyll and Mr Hyde",
     yearRead: 2025,
     author: "Robert Louis Stevenson",
