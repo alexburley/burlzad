@@ -1,5 +1,13 @@
 export default [
   {
+    title: "Strange Case of Dr Jekyll and Mr Hyde",
+    yearRead: 2025,
+    author: "Robert Louis Stevenson",
+    nonfiction: false,
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/f/f8/Jekyll_and_Hyde_Title.jpg",
+  },
+  {
     title:
       "Stoicism: How to use Stoic Philosophy to Find Inner Peace and Happiness",
     yearRead: 2025,
