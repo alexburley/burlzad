@@ -115,14 +115,14 @@ technical guidance and mentorship to a dozen juniors.</p>
     description: `<p><b>Graduated with a 1st class degree in Computer Science.</b></p>`,
   },
   {
-    date: new Date(2016, 5),
+    date: new Date(2016, 6),
     label: "Technology Intern",
     tenure: "3 months",
     tooltip: "Tesco PLC Intern",
     description: `<p><b>Built a secret scanning tool for Tesco's internal GitHub.</b></p>`,
   },
   {
-    date: new Date(2015, 4),
+    date: new Date(2015, 6),
     label: "Engineering Intern",
     tenure: "3 months",
     tooltip: "BT",

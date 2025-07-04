@@ -14,30 +14,30 @@ export default function ProfilePage() {
     .map((_, index) => index)
     .reduce((acc, val) => ({ ...acc, [val]: false }), {});
 
-  const [skillCardState, setSkillCardState] = useState(initialCardState);
+  // const [skillCardState, setSkillCardState] = useState(initialCardState);
   const [roleCardState, setRoleCardState] = useState(initialCardState);
 
-  const reset = () => {
-    setSkillCardState(initialCardState);
-    setRoleCardState(initialCardState);
-  };
+  // const reset = () => {
+  //   // setSkillCardState(initialCardState);
+  //   setRoleCardState(initialCardState);
+  // };
 
-  const skills = skillsItems.map(({ children, title, tags }, index) => {
-    return (
-      <SkillCard
-        title={getTitle(tags, title)}
-        key={index}
-        showingChildren={skillCardState[index]}
-        setShowingChildren={() => {
-          setSkillCardState({
-            ...skillCardState,
-            [index]: !skillCardState[index],
-          });
-        }}
-        children={<CardContent>{children}</CardContent>}
-      />
-    );
-  });
+  // const skills = skillsItems.map(({ children, title, tags }, index) => {
+  //   return (
+  //     <SkillCard
+  //       title={getTitle(tags, title)}
+  //       key={index}
+  //       showingChildren={skillCardState[index]}
+  //       setShowingChildren={() => {
+  //         setSkillCardState({
+  //           ...skillCardState,
+  //           [index]: !skillCardState[index],
+  //         });
+  //       }}
+  //       children={<CardContent>{children}</CardContent>}
+  //     />
+  //   );
+  // });
 
   const rolesToDisplay = Object.values(
     roles.reduce((acc, role) => {
@@ -115,14 +115,14 @@ export default function ProfilePage() {
         </SideColumn>
         <MainContent>
           <MainContentHeader>
-            <SectionTitle>Skills</SectionTitle>
-            <ResetButton onClick={reset} />
+            <SectionTitle>Work In Progress</SectionTitle>
+            {/* <ResetButton onClick={reset} /> */}
           </MainContentHeader>
-          <SkillsGrid>{skills}</SkillsGrid>
-          <SectionTitle>Roles</SectionTitle>
-          <ProjectsGrid>{work}</ProjectsGrid>
-          <SectionTitle>Projects</SectionTitle>
-          <ProjectsGrid>{projects}</ProjectsGrid>
+          {/* <SkillsGrid>{skills}</SkillsGrid> */}
+          {/* <SectionTitle>Roles</SectionTitle> */}
+          {/* <ProjectsGrid>{work}</ProjectsGrid> */}
+          {/* <SectionTitle>Projects</SectionTitle> */}
+          {/* <ProjectsGrid>{projects}</ProjectsGrid> */}
         </MainContent>
       </Wrapper>
     </Container>

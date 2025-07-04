@@ -29,7 +29,15 @@ export default function Timeline({ items = [] }) {
             <Node>
               <NodeOrb tooltip={date}>
                 <NodeTooltipWrapper>
-                  <NodeTooltip>{tooltip}</NodeTooltip>
+                  <NodeTooltip>
+                    <p>
+                      {date.toLocaleString("en-GB", {
+                        year: "numeric",
+                        month: "long",
+                      })}
+                    </p>
+                    <p>{tooltip}</p>
+                  </NodeTooltip>
                 </NodeTooltipWrapper>
               </NodeOrb>
               <NodeLabel>{label}</NodeLabel>

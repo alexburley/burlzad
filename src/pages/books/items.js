@@ -21,8 +21,7 @@ export default [
     yearRead: 2025,
     author: "Jason Hemlock",
     nonfiction: true,
-    imgSrc:
-      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71WLPsHQzWS._SL1500_.jpg",
+    imgSrc: "https://m.media-amazon.com/images/I/71WLPsHQzWS._SL1500_.jpg",
   },
   {
     title: "How to Talk to Anyone",
@@ -61,8 +60,7 @@ export default [
     yearRead: 2025,
     author: "Ursula K. Le Guin",
     fiction: true,
-    imgSrc:
-      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/A1cDdP9fv1L._SY522_.jpg",
+    imgSrc: "https://m.media-amazon.com/images/I/91RRoAU0VkL._SL1500_.jpg",
   },
   {
     title: "The Farthest Shore",
@@ -87,16 +85,14 @@ export default [
     yearRead: 2025,
     author: "Niccolò Machiavelli",
     nonfiction: true,
-    imgSrc:
-      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/61vlYoG0PiL._SL1441_.jpg",
+    imgSrc: "https://m.media-amazon.com/images/I/613IIHCzXeL._SL1500_.jpg",
   },
   {
     title: "Book of the Five Rings",
     yearRead: 2025,
     author: "Miyamoto Musashi",
     nonfiction: true,
-    imgSrc:
-      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/91sjH8fevmL._SL1500_.jpg",
+    imgSrc: "https://m.media-amazon.com/images/I/61iS5f1Y9xL._SL1499_.jpg",
   },
   {
     title: "Discourses of Epictetus",
