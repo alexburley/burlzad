@@ -38,7 +38,7 @@ export default function ProfilePage() {
   //     />
   //   );
   // });
-
+  // TODO: Idea is to have a timeline of roles, with the latest role at the top, and then a list of projects that I have worked on in each role. The projects should be clickable and show more details about them.
   const rolesToDisplay = Object.values(
     roles.reduce((acc, role) => {
       const replacement = acc[role.tooltip] || {};
@@ -113,17 +113,17 @@ export default function ProfilePage() {
         <SideColumn>
           <Timeline items={roles} />
         </SideColumn>
-        <MainContent>
-          <MainContentHeader>
-            <SectionTitle>Work In Progress</SectionTitle>
-            {/* <ResetButton onClick={reset} /> */}
-          </MainContentHeader>
-          {/* <SkillsGrid>{skills}</SkillsGrid> */}
-          {/* <SectionTitle>Roles</SectionTitle> */}
-          {/* <ProjectsGrid>{work}</ProjectsGrid> */}
-          {/* <SectionTitle>Projects</SectionTitle> */}
-          {/* <ProjectsGrid>{projects}</ProjectsGrid> */}
-        </MainContent>
+        {/* <MainContent> */}
+        {/* <MainContentHeader> */}
+        {/* <SectionTitle>Work In Progress</SectionTitle> */}
+        {/* <ResetButton onClick={reset} /> */}
+        {/* </MainContentHeader> */}
+        {/* <SkillsGrid>{skills}</SkillsGrid> */}
+        {/* <SectionTitle>Roles</SectionTitle> */}
+        {/* <ProjectsGrid>{work}</ProjectsGrid> */}
+        {/* <SectionTitle>Projects</SectionTitle> */}
+        {/* <ProjectsGrid>{projects}</ProjectsGrid> */}
+        {/* </MainContent> */}
       </Wrapper>
     </Container>
   );
@@ -140,6 +140,8 @@ const SideColumn = styled.div`
   min-width: 50px;
   max-width: 35%;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 0px;
 `;
 
