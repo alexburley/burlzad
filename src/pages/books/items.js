@@ -1,5 +1,12 @@
 export default [
   {
+    title: "Treasure Island",
+    yearRead: 2025,
+    author: "Robert Louis Stevenson",
+    nonfiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/61CzwD42JZL._SY522_.jpg",
+  },
+  {
     title: "Fahrenheit 451",
     yearRead: 2025,
     author: "Ray Bradbury",
