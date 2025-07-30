@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import NavigationBar from "./components/navigation-bar";
-import { BooksPage, HomePage, ProfilePage } from "./pages";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ResetStyle from "./styles/reset-style";
-import Theme from "./styles/theme";
-import DarkModeSwitch from "./components/dark-mode-switch";
+import NavigationBar from "./components/navigation-bar/index.jsx";
+import { BooksPage, HomePage, ProfilePage } from "./pages/index.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ResetStyle from "./styles/reset-style/index.js";
+import Theme from "./styles/theme/index.js";
+import DarkModeSwitch from "./components/dark-mode-switch/index.jsx";
 import styled from "styled-components";
 
 export default function App() {
@@ -18,17 +18,11 @@ export default function App() {
       <Theme darkMode={darkModeEnabled} />
       <Router>
         <NavigationBar />
-        <Switch>
-          <Route path="/books">
-            <BooksPage />
-          </Route>
-          <Route path="/profile">
-            <ProfilePage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
         <Spacer />
         {/* <DarkModeSwitch */}
         {/* darkModeEnabled={darkModeEnabled} */}

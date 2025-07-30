@@ -1,4 +1,4 @@
-import { BACKEND, FRONTEND } from "./skills";
+import { BACKEND, FRONTEND } from "./skills.jsx";
 
 export default [
   {

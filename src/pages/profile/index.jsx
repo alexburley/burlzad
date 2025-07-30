@@ -5,7 +5,7 @@ import Container from "../../components/container";
 import Timeline from "../../components/timeline";
 import Card from "../../components/card";
 import TextIcon from "../../components/text-icon";
-import skillsItems, { BACKEND, DEVOPS, FRONTEND, MANAGEMENT } from "./skills";
+import skillsItems, { BACKEND, DEVOPS, FRONTEND, MANAGEMENT } from "./skills.jsx";
 import roles from "./roles";
 import projectsItems from "./projects";
 
