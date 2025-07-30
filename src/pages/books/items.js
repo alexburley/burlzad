@@ -3,14 +3,14 @@ export default [
     title: "The Fall of Numenor",
     yearRead: 2025,
     author: "JRR Tolkien & Brian Sibley",
-    nonfiction: false,
+    fiction: true,
     imgSrc: "https://m.media-amazon.com/images/I/7149h160lYL._SL1500_.jpg",
   },
   {
     title: "Trainspotting",
     yearRead: 2025,
     author: "Irvine Welsh",
-    nonfiction: false,
+    fiction: true,
     imgSrc: "https://m.media-amazon.com/images/I/61aiPbbNlzL._SY522_.jpg",
   },
   {
