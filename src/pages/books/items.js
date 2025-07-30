@@ -17,21 +17,21 @@ export default [
     title: "Around the World in 80 Days",
     yearRead: 2025,
     author: "Jules Verne",
-    nonfiction: false,
+    fiction: true,
     imgSrc: "https://www.gutenberg.org/cache/epub/103/images/cover.jpg",
   },
   {
     title: "Treasure Island",
     yearRead: 2025,
     author: "Robert Louis Stevenson",
-    nonfiction: false,
+    fiction: true,
     imgSrc: "https://m.media-amazon.com/images/I/61CzwD42JZL._SY522_.jpg",
   },
   {
     title: "Fahrenheit 451",
     yearRead: 2025,
     author: "Ray Bradbury",
-    nonfiction: false,
+    fiction: true,
     imgSrc:
       "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg",
   },
@@ -39,7 +39,7 @@ export default [
     title: "Strange Case of Dr Jekyll and Mr Hyde",
     yearRead: 2025,
     author: "Robert Louis Stevenson",
-    nonfiction: false,
+    fiction: true,
     imgSrc:
       "https://upload.wikimedia.org/wikipedia/commons/f/f8/Jekyll_and_Hyde_Title.jpg",
   },
