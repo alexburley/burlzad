@@ -89,17 +89,39 @@ const NodeLabel = styled.span`
 const NodeTooltipWrapper = styled.div`
   background-color: var(--color-primary-contrast-low);
   position: absolute;
-  padding: 4px 8px;
-  left: 100%;
-  top: 150%;
+  padding: 8px 12px;
+  left: 20px;
+  top: -20px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: var(--color-primary-contrast-low);
+  }
 `;
 
-const NodeTooltip = styled.span`
-  visibility: inherit;
+const NodeTooltip = styled.div`
   font-size: 12px;
   color: var(--color-secondary);
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
+  
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  p:first-child {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
 `;
 
 const NodeOrb = styled.div`
@@ -111,10 +133,11 @@ const NodeOrb = styled.div`
   flex-shrink: 0;
   margin-left: -5px;
 
-  :hover {
+  &:hover {
     background-color: var(--color-secondary);
+    cursor: pointer;
     ${NodeTooltipWrapper} {
-      visibility: inherit;
+      visibility: visible;
     }
   }
 
