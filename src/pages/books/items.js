@@ -1,5 +1,26 @@
 export default [
   {
+    title: "The Fall of Numenor",
+    yearRead: 2025,
+    author: "JRR Tolkien & Brian Sibley",
+    nonfiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/7149h160lYL._SL1500_.jpg",
+  },
+  {
+    title: "Trainspotting",
+    yearRead: 2025,
+    author: "Irvine Welsh",
+    nonfiction: false,
+    imgSrc: "https://m.media-amazon.com/images/I/61aiPbbNlzL._SY522_.jpg",
+  },
+  {
+    title: "Around the World in 80 Days",
+    yearRead: 2025,
+    author: "Jules Verne",
+    nonfiction: false,
+    imgSrc: "https://www.gutenberg.org/cache/epub/103/images/cover.jpg",
+  },
+  {
     title: "Treasure Island",
     yearRead: 2025,
     author: "Robert Louis Stevenson",
