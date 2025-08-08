@@ -1,5 +1,20 @@
 export default [
   {
+    title: "War of the Worlds",
+    yearRead: 2025,
+    author: "H.G. Wells",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41DSUzo3iSL._SY445_SX342_ControlCacheEqualizer_.jpg",
+  },
+  {
+    title: "The Silmarillion (Audiobook)",
+    yearRead: 2025,
+    author: "JRR Tolkien & Christopher Tolkien",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81Ygs92I6GL._SL1500_.jpg",
+  },
+  {
     title: "The Fall of Numenor",
     yearRead: 2025,
     author: "JRR Tolkien & Brian Sibley",
