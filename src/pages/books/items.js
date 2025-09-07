@@ -1,5 +1,28 @@
 export default [
   {
+    title: "The Hobbit (Audiobook)",
+    yearRead: 2025,
+    author: "JRR Tolkien & Andy Serkis",
+    reread: true,
+    fiction: true,
+    imgSrc:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.thenile.io%2Fr1000%2F9780261103283.jpg&f=1&nofb=1&ipt=1bcff33dfd7eb0b7d3526d06e4dc067c30bde548545e90903ab582472a1ede38",
+  },
+  {
+    title: "Musonius Rufus: Lectures and Sayings ",
+    yearRead: 2025,
+    author: "Musonius Rufus & Cynthia King",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/41bNnygfVWL._SL1360_.jpg",
+  },
+  {
+    title: "Children of Time",
+    yearRead: 2025,
+    author: "Adrian Tchaikovsky",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91hH1Gk4otL._SL1500_.jpg",
+  },
+  {
     title: "War of the Worlds",
     yearRead: 2025,
     author: "H.G. Wells",
