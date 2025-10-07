@@ -1,5 +1,26 @@
 export default [
   {
+    title: "Organize Your Mind, Organize Your Life",
+    yearRead: 2025,
+    author: "Paul Graves, Margaret Moore",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91K5x+WAKbL._SY522_.jpg",
+  },
+  {
+    title: "Now It Can Be Told",
+    yearRead: 2025,
+    author: "General Leslie Groves",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81cJYEQ8svL._SL1500_.jpg",
+  },
+  {
+    title: "Children of Ruin",
+    yearRead: 2025,
+    author: "Adrian Tchaikovsky",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91QGCKt3rML._SL1500_.jpg",
+  },
+  {
     title: "The Hobbit (Audiobook)",
     yearRead: 2025,
     author: "JRR Tolkien & Andy Serkis",
