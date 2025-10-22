@@ -1,5 +1,21 @@
 export default [
   {
+    title: "Great Expectations",
+    yearRead: 2025,
+    author: "Charles Dickens",
+    nonfiction: false,
+    imgSrc:
+      "https://cdn.kobo.com/book-images/b209d868-19b0-46d8-9513-8eb16b3bac2d/1200/1200/False/great-expectations-327.jpg",
+  },
+  {
+    title: "Fear & Loathing in Las Vegas",
+    yearRead: 2025,
+    author: "Hunter S. Thompson",
+    nonfiction: false,
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/en/7/7c/Fear_and_Loathing_in_Las_Vegas.jpg",
+  },
+  {
     title: "Organize Your Mind, Organize Your Life",
     yearRead: 2025,
     author: "Paul Graves, Margaret Moore",
