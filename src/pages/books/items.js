@@ -1,5 +1,13 @@
 export default [
   {
+    title:
+      "Henry V: The Astonishing Rise of England's Greatest Warrior King (Audiobook)",
+    yearRead: 2025,
+    author: "Dan Jones",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81p4rio+YBL._SL1500_.jpg",
+  },
+  {
     title: "Great Expectations",
     yearRead: 2025,
     author: "Charles Dickens",
