@@ -1,7 +1,20 @@
 export default [
   {
-    title:
-      "Henry V: The Astonishing Rise of England's Greatest Warrior King (Audiobook)",
+    title: "Hells Angels",
+    yearRead: 2025,
+    author: "Hunter S. Thompson",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/61dtW3IMlWL._SL1200_.jpg",
+  },
+  {
+    title: "The Plantagents",
+    yearRead: 2025,
+    author: "Dan Jones",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91JVA5mn8QL._SL1500_.jpg",
+  },
+  {
+    title: "Henry V",
     yearRead: 2025,
     author: "Dan Jones",
     nonfiction: true,
