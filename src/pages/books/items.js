@@ -1,5 +1,40 @@
 export default [
   {
+    title: "Assassin's Quest",
+    yearRead: 2026,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81Ia91gaM+L.jpg",
+  },
+  {
+    title: "A Knight of the Seven Kingdoms (Audiobook)",
+    yearRead: 2025,
+    author: "George R. R. Martin",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/51KTZIXYrbL._SL500_.jpg",
+  },
+  {
+    title: "Powers and Thrones (Audiobook)",
+    yearRead: 2025,
+    author: "Dan Jones",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/61tRVXs3uPL.jpg",
+  },
+  {
+    title: "Royal Assassin",
+    yearRead: 2025,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81HchW3O7RL.jpg",
+  },
+  {
+    title: "Assassin's Apprentice",
+    yearRead: 2025,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81hlvQl+AZL.jpg",
+  },
+  {
     title: "Hells Angels",
     yearRead: 2025,
     author: "Hunter S. Thompson",
