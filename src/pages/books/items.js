@@ -1,10 +1,34 @@
 export default [
   {
+    title: "Fool's Fate",
+    yearRead: 2026,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc:
+      "https://cdn.waterstones.com/bookjackets/large/9780/0075/9780007588978.jpg",
+  },
+  {
+    title: "The Golden Fool",
+    yearRead: 2026,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91exzwDojRL._SL1500_.jpg",
+  },
+  {
+    title: "Fool's Errand",
+    yearRead: 2026,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/91Umip88MTL._AC_UF894,1000_QL80_.jpg",
+  },
+  {
     title: "Assassin's Quest",
     yearRead: 2026,
     author: "Robin Hobb",
     fiction: true,
-    imgSrc: "https://m.media-amazon.com/images/I/81Ia91gaM+L.jpg",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/91AWSDr+9iL._UF1000,1000_QL80_.jpg",
   },
   {
     title: "A Knight of the Seven Kingdoms (Audiobook)",
@@ -15,7 +39,7 @@ export default [
   },
   {
     title: "Powers and Thrones (Audiobook)",
-    yearRead: 2025,
+    yearRead: 2026,
     author: "Dan Jones",
     nonfiction: true,
     imgSrc: "https://m.media-amazon.com/images/I/61tRVXs3uPL.jpg",
