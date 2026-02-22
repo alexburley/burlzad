@@ -1,5 +1,29 @@
 export default [
   {
+    title: "Assassin's Fate",
+    yearRead: 2026,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/91mdDiJRquL._AC_UF894,1000_QL80_.jpg",
+  },
+  {
+    title: "Fool's Quest",
+    yearRead: 2026,
+    author: "Robin Hobb",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/91jmp2PbsUL._UF1000,1000_QL80_.jpg",
+  },
+  {
+    title: "On The Shortness of Life (De Brevitate Vitae)",
+    yearRead: 2026,
+    author: "Seneca",
+    fiction: false,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51lHtfG673L._AC_UF894,1000_QL80_.jpg",
+  },
+  {
     title: "Fool's Quest",
     yearRead: 2026,
     author: "Robin Hobb",
