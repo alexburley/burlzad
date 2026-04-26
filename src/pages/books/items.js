@@ -1,5 +1,44 @@
 export default [
   {
+    title:
+      "Harry Potter and the Philospher's Stone - Full Cast Edition(Audiobook)",
+    yearRead: 2026,
+    author: "J.K. Rowling",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/51YVgooSJuL._SL500_.jpg",
+  },
+  {
+    title: "Before They Are Hanged",
+    yearRead: 2026,
+    author: "Joe Abercrombie",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81I6VoQN4kL._SL1500_.jpg",
+  },
+  {
+    title: "Mythos (Audiobook)",
+    yearRead: 2026,
+    author: "Steven Fry",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/A1AbMB8XtDL._AC_UF894,1000_QL80_.jpg",
+  },
+  {
+    title: "Greek to Us",
+    yearRead: 2026,
+    author: "John Davie",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/81TfAOc742L._AC_UF894,1000_QL80_.jpg",
+  },
+  {
+    title: "The Blade Itself",
+    yearRead: 2026,
+    author: "Joe Abercrombie",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51s-weWqwQL._SY445_SX342_ML2_.jpg",
+  },
+  {
     title: "Assassin's Fate",
     yearRead: 2026,
     author: "Robin Hobb",
