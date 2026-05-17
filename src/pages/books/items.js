@@ -1,5 +1,36 @@
 export default [
   {
+    title: "Best Served Cold",
+    yearRead: 2026,
+    author: "Joe Abercrombie",
+    fiction: true,
+    imgSrc:
+      "https://i0.wp.com/joeabercrombie.com/wp-content/uploads/2014/03/uk-orig-best-served-cold.jpg",
+  },
+  {
+    title: "The Last Argument of Kings",
+    yearRead: 2026,
+    author: "Joe Abercrombie",
+    fiction: true,
+    imgSrc:
+      "https://i0.wp.com/joeabercrombie.com/wp-content/uploads/2014/03/uk-orig-last-argument-of-kings.jpg",
+  },
+  {
+    title: "Et Tu, Brute?",
+    yearRead: 2026,
+    author: "Harry Mount & John Davie",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81uqy7Nh6jL._SL1500_.jpg",
+  },
+  {
+    title: "The Oddysey (Audiobook)",
+    yearRead: 2026,
+    author: "Steven Fry",
+    fiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/81SuzQ1WZBL._AC_UF894,1000_QL80_.jpg",
+  },
+  {
     title:
       "Harry Potter and the Philospher's Stone - Full Cast Edition(Audiobook)",
     yearRead: 2026,
@@ -50,7 +81,7 @@ export default [
     title: "On The Shortness of Life (De Brevitate Vitae)",
     yearRead: 2026,
     author: "Seneca",
-    fiction: false,
+    nonfiction: true,
     imgSrc:
       "https://m.media-amazon.com/images/I/51lHtfG673L._AC_UF894,1000_QL80_.jpg",
   },
