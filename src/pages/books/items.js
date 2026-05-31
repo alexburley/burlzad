@@ -1,5 +1,12 @@
 export default [
   {
+    title: "The Oddysey (Audiobook)",
+    yearRead: 2026,
+    author: "Steven Fry",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/81RDm6ge8GL._SL1500_.jpg",
+  },
+  {
     title: "How to be a Stoic",
     yearRead: 2026,
     author: "Massimo Pigliucci",
