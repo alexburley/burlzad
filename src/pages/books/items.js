@@ -1,5 +1,19 @@
 export default [
   {
+    title: "How to be a Stoic",
+    yearRead: 2026,
+    author: "Massimo Pigliucci",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/91x2QKIx0FL._SL1500_.jpg",
+  },
+  {
+    title: "Heroes",
+    yearRead: 2026,
+    author: "Joe Abercrombie",
+    fiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/A1RYCcvWnWL._SL1500_.jpg",
+  },
+  {
     title: "Best Served Cold",
     yearRead: 2026,
     author: "Joe Abercrombie",
