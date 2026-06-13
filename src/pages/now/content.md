@@ -1,11 +1,9 @@
 ## Work
 
-Pushing my engineers to do the basics really f***ing well.
+Making my engineers do the basics really f\*\*\*ing well.
 Pushing the rest of Atom to follow suit.
 
 Getting Claude to build out my dream test strategy - functional tests overlayed with BDD, contract testing and testing in production.
-
-Writing as much code as I can without burning out the team with reviews.
 
 ## Building
 
@@ -13,7 +11,7 @@ My Grandma left us a treasure trove of handwritten family trees and research not
 
 ## Reading
 
-Tearing through high fantasy Joe Abercrombie whenever I get the chance. Brandon Sanderson is in my sights.
+Tearing through high fantasy (Joe Abercrombie) whenever I get the chance. Brandon Sanderson you're my sights.
 
 Combining my love of philosophy and history by reading about the Ancient Romans and Greeks — Stoicism especially.
 
@@ -23,9 +21,9 @@ Assassin's Creed Odyssey.
 
 ## Moving
 
-Running 2–3 times a week, building up to the Great North Run — my first half-marathon.
-
-Getting fit so I can play cricket in January. It's a sport I can see myself playing into old age.
+Running 2–3 times a week, building up to the Great North Run. I sprained my back
+three times this year, if I can run the GNR then it's back to weights and finally
+learn to play Cricket in January.
 
 ## Learning
 
