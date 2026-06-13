@@ -6,7 +6,7 @@ export default function NavigationBar() {
   const location = useLocation();
   const links = [
     ["/", "Home"],
-    ["/profile", "Profile"],
+    ["/profile", "Work"],
     ["/books", "Library"],
     ["/now", "Now"],
   ].map(([route, title]) => {
