@@ -43,5 +43,5 @@ const Header = styled.div`
 const Body = styled.div`
   width: 100%;
   height: 100%;
-  display: ${(p) => (p.show ? "" : "none")};
+  display: ${(p) => (p.show ? "block" : "none")};
 `;
