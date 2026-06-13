@@ -1,6 +1,6 @@
 ## Work
 
-Making my engineers do the basics really f\*\*\*ing well.
+Making my engineers do the basics really f***ing well.
 Pushing the rest of Atom to follow suit.
 
 Getting Claude to build out my dream test strategy - functional tests overlayed with BDD, contract testing and testing in production.
