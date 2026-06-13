@@ -76,7 +76,7 @@ const BookItem = styled.article`
 
 const BookImageWrapper = styled.div``;
 
-const BookImage = styled.img`
+const BookImage = styled.img.attrs({ loading: "lazy" })`
   width: 100%;
   height: 150px;
   object-fit: cover;
