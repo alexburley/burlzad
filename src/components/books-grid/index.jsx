@@ -23,7 +23,7 @@ export default function BooksGrid({ items }) {
           <BookGrid>
             {years[year].map(
               (
-                { title, imgSrc, author, reread, fiction, nonfiction },
+                { title, imgSrc, author, reread, fiction, nonfiction, audiobook },
                 index
               ) => {
                 return (
@@ -33,6 +33,7 @@ export default function BooksGrid({ items }) {
                       {reread && <ReReadBanner />}
                       {fiction && <FictionBanner />}
                       {nonfiction && <NonFictionBanner />}
+                      {audiobook && <AudiobookBanner />}
                     </BookImageWrapper>
                     <BookCaption>
                       <BookTitle>{title}</BookTitle>
@@ -110,4 +111,8 @@ const FictionBanner = styled(Banner)`
 
 const NonFictionBanner = styled(Banner)`
   background-color: var(--color-accent-red);
+`;
+
+const AudiobookBanner = styled(Banner)`
+  background-color: var(--color-accent-blue);
 `;

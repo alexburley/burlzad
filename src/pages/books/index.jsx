@@ -8,6 +8,7 @@ export const LEGEND_INDICATOR_MAP = {
   reread: `var(--color-accent-yellow)`,
   fiction: `var(--color-accent-green)`,
   nonfiction: `var(--color-accent-red)`,
+  audiobook: `var(--color-accent-blue)`,
 };
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -16,6 +17,7 @@ const FILTERS = [
   { value: "reread", label: "Re-Read" },
   { value: "fiction", label: "Fiction" },
   { value: "nonfiction", label: "Non-Fiction" },
+  { value: "audiobook", label: "Audiobook" },
 ];
 
 function deriveStats(allItems) {
@@ -25,6 +27,7 @@ function deriveStats(allItems) {
     fiction: allItems.filter((b) => b.fiction).length,
     nonfiction: allItems.filter((b) => b.nonfiction).length,
     rereads: allItems.filter((b) => b.reread).length,
+    audiobooks: allItems.filter((b) => b.audiobook).length,
   };
 }
 
@@ -87,6 +90,10 @@ export default function BooksPage() {
             <StatRow>
               <StatNumber>{stats.rereads}</StatNumber>
               <StatLabel>re-reads</StatLabel>
+            </StatRow>
+            <StatRow>
+              <StatNumber>{stats.audiobooks}</StatNumber>
+              <StatLabel>audiobooks</StatLabel>
             </StatRow>
           </StatsCard>
 
