@@ -17,7 +17,7 @@ export default function HomePage() {
             { Icon: PenTool, url: "https://blog.burlzad.com" },
             { Icon: Code, url: "https://www.npmjs.com/~burlzad" },
           ].map(({ Icon, url }, index) => (
-            <Link href={url} target="#blank" color="inherit" key={index}>
+            <Link href={url} target="_blank" rel="noopener noreferrer" key={index}>
               <Icon
                 style={{
                   width: 75,
