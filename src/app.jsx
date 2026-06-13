@@ -9,8 +9,7 @@ import styled from "styled-components";
 
 export default function App() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(
-    // window.matchMedia("(prefers-color-scheme:dark)").matches
-    true
+    window.matchMedia("(prefers-color-scheme: dark)").matches
   );
   return (
     <main>
@@ -24,10 +23,10 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
         <Spacer />
-        {/* <DarkModeSwitch */}
-        {/* darkModeEnabled={darkModeEnabled} */}
-        {/* onClick={() => setDarkModeEnabled(!darkModeEnabled)} */}
-        {/* /> */}
+        <DarkModeSwitch
+          darkModeEnabled={darkModeEnabled}
+          onClick={() => setDarkModeEnabled(!darkModeEnabled)}
+        />
       </Router>
     </main>
   );
