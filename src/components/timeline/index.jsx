@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useRef, useState } from "react";
+import styled, { keyframes, css } from "styled-components";
 
 const ONE_MONTH_IN_MILLISECONDS = 1000 * 60 * 60 * 24 * 30;
 
@@ -15,13 +15,40 @@ const getConnectorHeight = (current, previous) => {
   else return connectorHeight;
 };
 
+function AnimatedSection({ children }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <Section ref={ref} visible={visible}>
+      {children}
+    </Section>
+  );
+}
+
 export default function Timeline({ items = [] }) {
   return (
     <Wrapper>
       {items.map(({ date, label, tooltip }, index) => {
         const { date: previousDate } = items[index - 1] || { date: new Date() };
         return (
-          <Section key={index}>
+          <AnimatedSection key={index}>
             <Connector
               end={!index ? 1 : 0}
               height={getConnectorHeight(date, previousDate)}
@@ -42,14 +69,38 @@ export default function Timeline({ items = [] }) {
               </NodeOrb>
               <NodeLabel>{label}</NodeLabel>
             </Node>
-          </Section>
+          </AnimatedSection>
         );
       })}
     </Wrapper>
   );
 }
 
-const Section = styled.div``;
+const fadeSlideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const Section = styled.div`
+  opacity: 0;
+
+  ${(p) =>
+    p.visible &&
+    css`
+      animation: ${fadeSlideIn} 350ms ease forwards;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+        opacity: 1;
+      }
+    `}
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -95,7 +146,7 @@ const NodeTooltipWrapper = styled.div`
   z-index: 1000;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -112,12 +163,12 @@ const NodeTooltip = styled.div`
   color: var(--color-secondary);
   text-align: left;
   white-space: nowrap;
-  
+
   p {
     margin: 0;
     line-height: 1.4;
   }
-  
+
   p:first-child {
     font-weight: bold;
     margin-bottom: 4px;
