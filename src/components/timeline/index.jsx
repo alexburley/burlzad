@@ -132,16 +132,20 @@ const NodeOrb = styled.div`
   height: 12px;
   flex-shrink: 0;
   margin-left: -5px;
+  transition: background-color 150ms ease;
 
   &:hover {
     background-color: var(--color-secondary);
     cursor: pointer;
     ${NodeTooltipWrapper} {
       visibility: visible;
+      opacity: 1;
     }
   }
 
   ${NodeTooltipWrapper} {
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 150ms ease;
   }
 `;

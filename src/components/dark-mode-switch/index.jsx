@@ -27,7 +27,8 @@ const IconWrapper = styled.a`
   right: 0;
   margin: 8px;
   color: var(--color-contrast);
-  :hover {
+  transition: color 150ms ease;
+  &:hover {
     color: var(--color-secondary);
   }
 `;

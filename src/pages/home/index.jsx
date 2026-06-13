@@ -71,7 +71,8 @@ const IconsWrapper = styled.div`
 const Link = styled.a`
   text-decoration: none;
   color: inherit;
-  :hover {
+  transition: color 150ms ease;
+  &:hover {
     color: var(--color-secondary);
   }
 `;

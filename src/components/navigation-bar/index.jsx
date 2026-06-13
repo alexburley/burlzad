@@ -23,17 +23,18 @@ export default function NavigationBar() {
 }
 
 const NavLinkStyled = styled(NavLink)`
-  width: 50px;
   text-decoration: none;
   color: var(--color-contrast);
   font-size: 1.25rem;
+  transition: color 150ms ease;
 
-  span:hover {
+  &:hover span {
     color: var(--color-secondary);
   }
 
   span {
     padding-bottom: 4px;
+    transition: border-color 150ms ease;
     border-bottom: ${(props) =>
       props.active ? "solid 2px var(--color-secondary)" : ""};
   }
