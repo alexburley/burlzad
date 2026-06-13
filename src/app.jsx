@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavigationBar from "./components/navigation-bar/index.jsx";
-import { BooksPage, HomePage, ProfilePage } from "./pages/index.js";
+import { BooksPage, HomePage, ProfilePage, NowPage } from "./pages/index.js";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import ResetStyle from "./styles/reset-style/index.js";
 import Theme from "./styles/theme/index.js";
@@ -14,6 +14,7 @@ function AnimatedRoutes() {
       <Routes>
         <Route path="/books" element={<BooksPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/now" element={<NowPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </PageWrapper>

@@ -8,6 +8,7 @@ export default function NavigationBar() {
     ["/", "Home"],
     ["/profile", "Profile"],
     ["/books", "Library"],
+    ["/now", "Now"],
   ].map(([route, title]) => {
     return (
       <NavLinkStyled
