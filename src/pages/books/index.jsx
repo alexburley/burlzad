@@ -13,22 +13,30 @@ export const LEGEND_INDICATOR_MAP = {
 export default function BooksPage() {
   return (
     <Container>
-      <Legend>
-        {[
-          { value: "reread", label: "Re-Read" },
-          { value: "fiction", label: "Fiction" },
-          { value: "nonfiction", label: "Non-Fiction" },
-        ].map(({ value, label }) => (
-          <LegendItemWrapper>
-            <LegendIndicator color={LEGEND_INDICATOR_MAP[value]} />
-            <LegendValue>{label}</LegendValue>
-          </LegendItemWrapper>
-        ))}
-      </Legend>
-      <BooksGrid items={items} />
+      <PageWrapper>
+        <BooksGrid items={items} />
+        <Legend>
+          {[
+            { value: "reread", label: "Re-Read" },
+            { value: "fiction", label: "Fiction" },
+            { value: "nonfiction", label: "Non-Fiction" },
+          ].map(({ value, label }) => (
+            <LegendItemWrapper key={value}>
+              <LegendIndicator color={LEGEND_INDICATOR_MAP[value]} />
+              <LegendValue>{label}</LegendValue>
+            </LegendItemWrapper>
+          ))}
+        </Legend>
+      </PageWrapper>
     </Container>
   );
 }
+
+const PageWrapper = styled.div`
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+`;
 
 const LegendItemWrapper = styled.div`
   display: flex;
@@ -47,12 +55,10 @@ const LegendValue = styled.span``;
 
 const Legend = styled.div`
   position: sticky;
-  float: right;
+  top: 16px;
   display: flex;
   flex-direction: column;
-  margin-left: 8px;
-  top: 16px;
-  left: 85%;
+  flex-shrink: 0;
   background-color: var(--color-primary-contrast-high);
   border-radius: 8px;
 `;
