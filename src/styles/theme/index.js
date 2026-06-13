@@ -30,8 +30,8 @@ const Theme = createGlobalStyle`
     --color-secondary: hsl(43, 96%, 56%);
 
     --color-accent-blue: #1D4ED8;
-    --color-accent-red:#B91C1C;
-    --color-accent-yellow: hsl(43, 96%, 56%);
+    --color-accent-red: #B91C1C;
+    --color-accent-yellow: var(--color-secondary);
     --color-accent-green: #047857;
   }
 
