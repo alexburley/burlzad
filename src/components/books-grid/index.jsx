@@ -110,9 +110,9 @@ const FictionBanner = styled(Banner)`
 `;
 
 const NonFictionBanner = styled(Banner)`
-  background-color: var(--color-accent-red);
+  background-color: var(--color-accent-blue);
 `;
 
 const AudiobookBanner = styled(Banner)`
-  background-color: var(--color-accent-blue);
+  background-color: var(--color-accent-red);
 `;

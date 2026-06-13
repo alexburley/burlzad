@@ -7,8 +7,8 @@ import styled from "styled-components";
 export const LEGEND_INDICATOR_MAP = {
   reread: `var(--color-accent-yellow)`,
   fiction: `var(--color-accent-green)`,
-  nonfiction: `var(--color-accent-red)`,
-  audiobook: `var(--color-accent-blue)`,
+  nonfiction: `var(--color-accent-blue)`,
+  audiobook: `var(--color-accent-red)`,
 };
 
 const CURRENT_YEAR = new Date().getFullYear();
