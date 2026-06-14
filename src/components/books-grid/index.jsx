@@ -1,53 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
-const groupItemsByYears = (items) => {
-  const years = {};
-  items.forEach((item) => {
-    const year = item.yearRead;
-    if (years[year]) years[year].push(item);
-    else years[year] = [item];
-  });
-  return years;
-};
-
 export default function BooksGrid({ items }) {
-  const years = groupItemsByYears(items);
-  const books = Object.keys(years)
-    .sort()
-    .reverse()
-    .map((year, index) => {
-      return (
-        <YearSectionWrapper key={index}>
+  const byYear = Object.groupBy(items, (b) => b.yearRead);
+  return (
+    <Wrapper>
+      {Object.keys(byYear).sort().reverse().map((year) => (
+        <section key={year}>
           <YearHeading>{year}</YearHeading>
           <BookGrid>
-            {years[year].map(
-              (
-                { title, imgSrc, author, reread, fiction, nonfiction, audiobook },
-                index
-              ) => {
-                return (
-                  <BookItem key={index}>
-                    <BookImageWrapper>
-                      <BookImage alt={title} src={imgSrc}></BookImage>
-                      {reread && <ReReadBanner />}
-                      {fiction && <FictionBanner />}
-                      {nonfiction && <NonFictionBanner />}
-                      {audiobook && <AudiobookBanner />}
-                    </BookImageWrapper>
-                    <BookCaption>
-                      <BookTitle>{title}</BookTitle>
-                      <BookAuthor>{author}</BookAuthor>
-                    </BookCaption>
-                  </BookItem>
-                );
-              }
-            )}
+            {byYear[year].map(({ title, imgSrc, author, reread, fiction, nonfiction, audiobook }, index) => (
+              <BookItem key={index}>
+                <div>
+                  <BookImage alt={title} src={imgSrc} />
+                  {reread && <ReReadBanner />}
+                  {fiction && <FictionBanner />}
+                  {nonfiction && <NonFictionBanner />}
+                  {audiobook && <AudiobookBanner />}
+                </div>
+                <BookCaption>
+                  <BookTitle>{title}</BookTitle>
+                  <BookAuthor>{author}</BookAuthor>
+                </BookCaption>
+              </BookItem>
+            ))}
           </BookGrid>
-        </YearSectionWrapper>
-      );
-    });
-  return <Wrapper>{books}</Wrapper>;
+        </section>
+      ))}
+    </Wrapper>
+  );
 }
 
 const Wrapper = styled.div`
@@ -55,8 +36,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 20px;
 `;
-
-const YearSectionWrapper = styled.div``;
 
 const YearHeading = styled.h3`
   font-size: 1.5rem;
@@ -74,8 +53,6 @@ const BookItem = styled.article`
   flex-direction: column;
   gap: 12px;
 `;
-
-const BookImageWrapper = styled.div``;
 
 const BookImage = styled.img.attrs({ loading: "lazy" })`
   width: 100%;

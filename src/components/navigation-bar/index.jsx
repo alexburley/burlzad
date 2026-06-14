@@ -1,26 +1,24 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+const links = [
+  ["/", "Home"],
+  ["/profile", "Work"],
+  ["/books", "Library"],
+  ["/now", "Now"],
+];
+
 export default function NavigationBar() {
-  const location = useLocation();
-  const links = [
-    ["/", "Home"],
-    ["/profile", "Work"],
-    ["/books", "Library"],
-    ["/now", "Now"],
-  ].map(([route, title]) => {
-    return (
-      <NavLinkStyled
-        active={location.pathname === route ? 1 : 0}
-        to={route}
-        key={route}
-      >
-        <span>{title}</span>
-      </NavLinkStyled>
-    );
-  });
-  return <Nav>{links}</Nav>;
+  return (
+    <Nav>
+      {links.map(([route, title]) => (
+        <NavLinkStyled to={route} key={route} end={route === "/"}>
+          <span>{title}</span>
+        </NavLinkStyled>
+      ))}
+    </Nav>
+  );
 }
 
 const NavLinkStyled = styled(NavLink)`
@@ -36,8 +34,11 @@ const NavLinkStyled = styled(NavLink)`
   span {
     padding-bottom: 4px;
     transition: border-color 150ms ease;
-    border-bottom: ${(props) =>
-      props.active ? "solid 2px var(--color-secondary)" : ""};
+    border-bottom: solid 2px transparent;
+  }
+
+  &.active span {
+    border-bottom-color: var(--color-secondary);
   }
 `;
 

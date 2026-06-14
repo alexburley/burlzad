@@ -205,12 +205,18 @@ const Legend = styled.div`
   border-radius: 8px;
 `;
 
-const LegendItemWrapper = styled.div`
+const LegendItemWrapper = styled.button`
   display: flex;
   gap: 12px;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 8px;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  width: 100%;
+  text-align: left;
   opacity: ${(p) => (p.dimmed ? 0.4 : 1)};
   background-color: ${(p) =>
     p.active ? "var(--color-primary-contrast-low)" : "transparent"};

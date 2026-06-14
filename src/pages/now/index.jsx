@@ -23,14 +23,14 @@ export default function NowPage() {
       <Content>
         <Sections>
           {sections.map(({ heading, items }) => (
-            <Section key={heading}>
+            <section key={heading}>
               <SectionHeading>{heading}</SectionHeading>
               <ItemList>
                 {items.map((item, i) => (
                   <Item key={i}>{item}</Item>
                 ))}
               </ItemList>
-            </Section>
+            </section>
           ))}
         </Sections>
 
@@ -100,8 +100,6 @@ const Sections = styled.div`
   flex-direction: column;
   gap: 32px;
 `;
-
-const Section = styled.div``;
 
 const SectionHeading = styled.h2`
   font-size: 0.75rem;
