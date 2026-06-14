@@ -1,9 +1,10 @@
 import React, { useMemo } from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import { useParams, Link } from "react-router-dom";
 import Container from "../../components/container";
 import { getPost } from "./posts";
 import { marked } from "./markdown";
+import "highlight.js/styles/atom-one-dark.css";
 
 export default function PostPage() {
   const { slug } = useParams();
@@ -20,7 +21,6 @@ export default function PostPage() {
 
   return (
     <Container>
-      <HljsTheme />
       <PostHeader>
         <BackLink to="/blog">← Blog</BackLink>
         <PostTitle>{post.title}</PostTitle>
@@ -36,23 +36,6 @@ export default function PostPage() {
     </Container>
   );
 }
-
-const HljsTheme = createGlobalStyle`
-  .hljs {
-    background: var(--color-primary-contrast-high);
-    color: var(--color-contrast);
-    padding: 1em;
-    border-radius: 6px;
-    overflow-x: auto;
-  }
-  .hljs-keyword, .hljs-selector-tag { color: #c678dd; }
-  .hljs-string, .hljs-attr { color: #98c379; }
-  .hljs-number, .hljs-literal { color: #d19a66; }
-  .hljs-comment { color: var(--color-contrast); opacity: 0.4; font-style: italic; }
-  .hljs-title, .hljs-name { color: #61afef; }
-  .hljs-type, .hljs-built_in { color: #e5c07b; }
-  .hljs-variable { color: #e06c75; }
-`;
 
 const PostHeader = styled.div`
   padding-top: 32px;
@@ -106,6 +89,8 @@ const PostBody = styled.article`
 
   pre {
     margin-bottom: 1.2em;
+    border-radius: 6px;
+    overflow-x: auto;
   }
 
   code:not(pre code) {
