@@ -18,7 +18,7 @@ const getConnectorHeight = (current, previous) => {
 export default function Timeline({ items = [] }) {
   return (
     <Wrapper>
-      {items.map(({ date, label, tooltip }, index) => {
+      {items.map(({ date, label, tooltip, tech = [], highlights = [] }, index) => {
         const { date: previousDate } = items[index - 1] || { date: new Date() };
         return (
           <Section key={index}>
@@ -27,7 +27,7 @@ export default function Timeline({ items = [] }) {
               height={getConnectorHeight(date, previousDate)}
             />
             <Node>
-              <NodeOrb tooltip={date}>
+              <NodeOrb>
                 <NodeTooltipWrapper>
                   <NodeTooltip>
                     <p>
@@ -36,7 +36,20 @@ export default function Timeline({ items = [] }) {
                         month: "long",
                       })}
                     </p>
-                    <p>{tooltip}</p>
+                    {tech.length > 0 && (
+                      <NodeTechList>
+                        {tech.map((t) => (
+                          <NodeTechTag key={t}>{t}</NodeTechTag>
+                        ))}
+                      </NodeTechList>
+                    )}
+                    {highlights.length > 0 && (
+                      <NodeHighlightList>
+                        {highlights.map((h, i) => (
+                          <li key={i}>{h}</li>
+                        ))}
+                      </NodeHighlightList>
+                    )}
                   </NodeTooltip>
                 </NodeTooltipWrapper>
               </NodeOrb>
@@ -109,6 +122,7 @@ const NodeTooltipWrapper = styled.div`
   padding: 8px 12px;
   left: 20px;
   top: -20px;
+  min-width: 320px;
   z-index: 1000;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -128,16 +142,45 @@ const NodeTooltip = styled.div`
   font-size: 12px;
   color: var(--color-secondary);
   text-align: left;
-  white-space: nowrap;
+  max-width: 380px;
 
   p {
     margin: 0;
-    line-height: 1.4;
-  }
-
-  p:first-child {
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+`;
+
+const NodeTechList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+`;
+
+const NodeTechTag = styled.span`
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-contrast);
+  color: var(--color-contrast);
+  opacity: 0.6;
+  white-space: nowrap;
+`;
+
+const NodeHighlightList = styled.ul`
+  margin: 0;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  li {
+    font-size: 11px;
+    line-height: 1.35;
+    opacity: 0.75;
+    color: var(--color-contrast);
   }
 `;
 
