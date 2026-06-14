@@ -7,6 +7,7 @@ const links = [
   ["/profile", "Work"],
   ["/books", "Library"],
   ["/now", "Now"],
+  ["/uses", "Uses"],
 ];
 
 export default function NavigationBar() {
