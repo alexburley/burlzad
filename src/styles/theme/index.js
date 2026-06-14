@@ -35,8 +35,12 @@ const Theme = createGlobalStyle`
     --color-accent-green: #047857;
   }
 
+  html,
   body {
     background-color: var(--color-primary);
+  }
+
+  body {
     color: var(--color-contrast);
     font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
