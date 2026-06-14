@@ -30,15 +30,15 @@ export default [
     items: [
       {
         name: "iTerm2",
-        description: "Terminal.",
+        description: "",
       },
       {
         name: "VS Code",
-        description: "Editor.",
+        description: "",
       },
       {
         name: "Claude Code",
-        description: "AI coding assistant in the terminal.",
+        description: "",
       },
     ],
   },
