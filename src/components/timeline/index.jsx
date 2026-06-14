@@ -124,6 +124,8 @@ const Node = styled.div`
 const NodeLabel = styled.span`
   display: flex;
   flex-direction: column;
+  height: 0px;
+  overflow: visible;
   align-self: start;
   margin-left: 16px;
   font-size: 12px;
