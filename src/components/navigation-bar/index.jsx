@@ -8,6 +8,7 @@ const links = [
   ["/books", "Library"],
   ["/now", "Now"],
   ["/uses", "Uses"],
+  ["/blog", "Blog"],
 ];
 
 export default function NavigationBar() {
