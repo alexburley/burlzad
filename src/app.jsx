@@ -60,6 +60,7 @@ const Main = styled.main`
 `;
 
 const PageWrapper = styled.div`
+  background-color: var(--color-primary);
   animation: ${fadeIn} 200ms ease;
 
   @media (prefers-reduced-motion: reduce) {
