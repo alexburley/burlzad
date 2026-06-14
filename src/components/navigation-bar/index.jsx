@@ -7,7 +7,6 @@ const links = [
   ["/profile", "Work"],
   ["/books", "Library"],
   ["/now", "Now"],
-  ["/uses", "Uses"],
   ["/blog", "Blog"],
 ];
 
