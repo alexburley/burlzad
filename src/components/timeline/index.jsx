@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import styled, { keyframes, css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
 const ONE_MONTH_IN_MILLISECONDS = 1000 * 60 * 60 * 24 * 30;
 
@@ -15,40 +15,13 @@ const getConnectorHeight = (current, previous) => {
   else return connectorHeight;
 };
 
-function AnimatedSection({ children }) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <Section ref={ref} visible={visible}>
-      {children}
-    </Section>
-  );
-}
-
 export default function Timeline({ items = [] }) {
   return (
     <Wrapper>
       {items.map(({ date, label, tooltip }, index) => {
         const { date: previousDate } = items[index - 1] || { date: new Date() };
         return (
-          <AnimatedSection key={index}>
+          <Section key={index}>
             <Connector
               end={!index ? 1 : 0}
               height={getConnectorHeight(date, previousDate)}
@@ -72,38 +45,14 @@ export default function Timeline({ items = [] }) {
                 <NodeCompany>{tooltip}</NodeCompany>
               </NodeLabel>
             </Node>
-          </AnimatedSection>
+          </Section>
         );
       })}
     </Wrapper>
   );
 }
 
-const fadeSlideIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const Section = styled.div`
-  opacity: 0;
-
-  ${(p) =>
-    p.visible &&
-    css`
-      animation: ${fadeSlideIn} 350ms ease forwards;
-
-      @media (prefers-reduced-motion: reduce) {
-        animation: none;
-        opacity: 1;
-      }
-    `}
-`;
+const Section = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
