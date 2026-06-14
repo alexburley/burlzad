@@ -19,8 +19,6 @@ export default function NowPage() {
           <SubtitleLink href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer">
             What's this?
           </SubtitleLink>
-          {" · "}
-          <SubtitleLink as={Link} to="/uses">My setup →</SubtitleLink>
         </Subtitle>
         <Updated>Updated {new Date().toLocaleDateString("en-GB", { month: "long", year: "numeric" })}</Updated>
       </PageHeader>
@@ -65,6 +63,11 @@ export default function NowPage() {
               </BookItem>
             ))}
             <SeeAll href="/books">See all books →</SeeAll>
+          </AsideSection>
+
+          <AsideSection>
+            <AsideHeading>Setup</AsideHeading>
+            <SeeAll as={Link} to="/uses">My setup →</SeeAll>
           </AsideSection>
         </Aside>
       </Content>
