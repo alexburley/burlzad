@@ -26,7 +26,7 @@ export default function App() {
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
   return (
-    <main>
+    <Main>
       <ResetStyle />
       <Theme darkMode={darkModeEnabled} />
       <Router>
@@ -38,7 +38,7 @@ export default function App() {
           onClick={() => setDarkModeEnabled(!darkModeEnabled)}
         />
       </Router>
-    </main>
+    </Main>
   );
 }
 
@@ -51,6 +51,12 @@ const fadeIn = keyframes`
     opacity: 1;
     transform: translateY(0);
   }
+`;
+
+const Main = styled.main`
+  background-color: var(--color-primary);
+  min-height: 100dvh;
+  isolation: isolate;
 `;
 
 const PageWrapper = styled.div`
