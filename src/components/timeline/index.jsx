@@ -68,7 +68,8 @@ export default function Timeline({ items = [] }) {
                 </NodeTooltipWrapper>
               </NodeOrb>
               <NodeLabel>
-                {label} <NodeCompany>@ {tooltip}</NodeCompany>
+                {label}
+                <NodeCompany>{tooltip}</NodeCompany>
               </NodeLabel>
             </Node>
           </AnimatedSection>
@@ -121,17 +122,18 @@ const Node = styled.div`
 `;
 
 const NodeLabel = styled.span`
-  height: 0px;
+  display: flex;
+  flex-direction: column;
   align-self: start;
   margin-left: 16px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 14px;
   margin-top: -1px;
   flex: 0 1 200px;
 
   @media (min-width: 600px) {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 18px;
   }
 
   @media (max-width: 370px) {
@@ -140,8 +142,14 @@ const NodeLabel = styled.span`
 `;
 
 const NodeCompany = styled.span`
-  opacity: 0.5;
-  font-weight: 400;
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.45;
+  margin-top: 2px;
+
+  @media (min-width: 600px) {
+    font-size: 13px;
+  }
 `;
 
 const NodeTooltipWrapper = styled.div`
