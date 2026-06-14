@@ -1,1 +1,0 @@
-- https://dilshankelsen.com/make-styled-components-class-names-readable/
