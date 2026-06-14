@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "./components/navigation-bar/index.jsx";
 import { BooksPage, HomePage, ProfilePage, NowPage, UsesPage, BlogPage, PostPage } from "./pages/index.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Router, Routes, Route } from "./router.jsx";
 import ResetStyle from "./styles/reset-style/index.js";
 import Theme from "./styles/theme/index.js";
 import styled from "styled-components";
@@ -18,8 +18,8 @@ export default function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/now" element={<NowPage />} />
           <Route path="/uses" element={<UsesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<PostPage />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
         <Spacer />

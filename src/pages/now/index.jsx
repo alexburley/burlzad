@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "../../router.jsx";
 import Container from "../../components/container";
 import items from "../books/items";
 import sections from "./content";

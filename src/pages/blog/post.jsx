@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "../../router.jsx";
 import Container from "../../components/container";
 import { getPost } from "./posts";
 import { marked } from "./markdown";

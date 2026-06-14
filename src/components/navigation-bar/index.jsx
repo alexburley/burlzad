@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Link, useLocation } from "../../router.jsx";
 
 const links = [
   ["/", "Home"],
@@ -11,18 +11,22 @@ const links = [
 ];
 
 export default function NavigationBar() {
+  const [path] = useLocation();
   return (
     <Nav>
-      {links.map(([route, title]) => (
-        <NavLinkStyled to={route} key={route} end={route === "/"}>
-          <span>{title}</span>
-        </NavLinkStyled>
-      ))}
+      {links.map(([route, title]) => {
+        const active = route === "/" ? path === "/" : path.startsWith(route);
+        return (
+          <NavLinkStyled to={route} key={route} $active={active}>
+            <span>{title}</span>
+          </NavLinkStyled>
+        );
+      })}
     </Nav>
   );
 }
 
-const NavLinkStyled = styled(NavLink)`
+const NavLinkStyled = styled(Link)`
   text-decoration: none;
   color: var(--color-contrast);
   font-size: 1.25rem;
@@ -35,11 +39,7 @@ const NavLinkStyled = styled(NavLink)`
   span {
     padding-bottom: 4px;
     transition: border-color 150ms ease;
-    border-bottom: solid 2px transparent;
-  }
-
-  &.active span {
-    border-bottom-color: var(--color-secondary);
+    border-bottom: solid 2px ${(p) => (p.$active ? "var(--color-secondary)" : "transparent")};
   }
 `;
 
