@@ -1,5 +1,27 @@
 export default [
   {
+    title: "Heroes",
+    yearRead: 2026,
+    author: "Steven Fry",
+    fiction: true,
+    audiobook: true,
+    imgSrc: "https://m.media-amazon.com/images/I/51kmVSBVc6L._SL500_.jpg",
+  },
+  {
+    title: "A Guide to the Good Life: The Ancient Art of Stoic Joy",
+    yearRead: 2026,
+    author: "William B. Irvine",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/61WiUERl8+L.jpg",
+  },
+  {
+    title: "Man's Search for Meaning",
+    yearRead: 2026,
+    author: "Viktor Frankl",
+    nonfiction: true,
+    imgSrc: "https://m.media-amazon.com/images/I/819Pl1nP0ZL._SL1500_.jpg",
+  },
+  {
     title: "How to be a Stoic",
     yearRead: 2026,
     author: "Massimo Pigliucci",
