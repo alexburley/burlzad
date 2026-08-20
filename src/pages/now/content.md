@@ -1,9 +1,8 @@
 ## Work
 
-Making my engineers do the basics really f***ing well.
-Pushing the rest of Atom to follow suit.
+Building the next generation of golang services at Atom Bank.
 
-Getting Claude to build out my dream test strategy - functional tests overlayed with BDD, contract testing and testing in production.
+Working with Claude to build out my dream test strategy - functional tests overlayed with BDD, contract testing and testing in production.
 
 ## Building
 
@@ -17,7 +16,7 @@ Combining my love of philosophy and history by reading about the Ancient Romans 
 
 ## Playing
 
-Assassin's Creed Odyssey.
+Witcher 3
 
 ## Moving
 
@@ -27,4 +26,4 @@ learn to play Cricket in January.
 
 ## Learning
 
-Going deeper into Stoicism. Anyone who knows me knows I am a whingy "smarter not harder" sort of bloke. Just trying to be a bit less of that.
+Going deeper into Stoicism.

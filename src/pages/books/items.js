@@ -1,5 +1,21 @@
 export default [
   {
+    title: "Letters on Ethics: To Lucilius",
+    yearRead: 2026,
+    author: "Seneca / Margaret Graver and A. A. Long",
+    nonfiction: false,
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41mh7gMNmIL._SY445_SX342_ML2_.jpg",
+  },
+  {
+    title: "Sharp Ends",
+    yearRead: 2026,
+    author: "Joe Abercrombie",
+    fiction: true,
+    imgSrc:
+      "https://i0.wp.com/joeabercrombie.com//wp-content/uploads/2015/12/Sharp-Ends-FC-600x952.jpg",
+  },
+  {
     title: "Heroes",
     yearRead: 2026,
     author: "Steven Fry",
