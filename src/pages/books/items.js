@@ -1,5 +1,29 @@
 export default [
   {
+    title: "The Reverse Centaur's Guide to Life",
+    yearRead: 2026,
+    author: "Cory Doctorow",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T1/images/I/71yx+Z7PfjL._SL1500_.jpg",
+  },
+  {
+    title: "Empire of AI",
+    yearRead: 2026,
+    author: "Karen Hao",
+    nonfiction: true,
+    imgSrc:
+      "https://www.worldofbooks.com/cdn/shop/files/9781802064650.jpg?v=1788605665&width=493",
+  },
+  {
+    title: "Utopia",
+    yearRead: 2026,
+    author: "Thomas More / George M. Logan",
+    nonfiction: true,
+    imgSrc:
+      "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T1/images/I/71CFeKNlRYL._SL1313_.jpg",
+  },
+  {
     title: "Letters on Ethics: To Lucilius",
     yearRead: 2026,
     author: "Seneca / Margaret Graver and A. A. Long",
