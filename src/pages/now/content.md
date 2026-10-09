@@ -2,27 +2,27 @@
 
 Building the next generation of golang services at Atom Bank.
 
-Working with Claude to build out my dream test strategy - functional tests overlayed with BDD, contract testing and testing in production.
+Harnessing agentic coding with BDD and verification.
 
 ## Building
 
-My Grandma left us a treasure trove of handwritten family trees and research notes. I'm building some kind of software that will preserve the documents and allow the rest of the family to explore.
+Nothing!
 
 ## Reading
 
-Tearing through high fantasy (Joe Abercrombie) whenever I get the chance. Brandon Sanderson you're my sights.
+Tearing through high fantasy (Joe Abercrombie) whenever I get the chance.
 
-Combining my love of philosophy and history by reading about the Ancient Romans and Greeks — Stoicism especially.
+Empire of AI - Understanding the business side of what's happening to our world.
+
+Senecas Letters to Lucillus. The 3rd re-read and it's enjoyable as ever.
 
 ## Playing
 
-Witcher 3
+Witcher 3 - Remastered
 
 ## Moving
 
-Running 2–3 times a week, building up to the Great North Run. I sprained my back
-three times this year, if I can run the GNR then it's back to weights and finally
-learn to play Cricket in January.
+Had my 5th back flare up this year. Currently stretching, resting and preparing for a house move.
 
 ## Learning
 
